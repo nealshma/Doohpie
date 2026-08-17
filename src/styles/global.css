@@ -126,6 +126,11 @@ textarea {
   padding-bottom: 120px;
 }
 
+.padding-section-large {
+  padding-top: 160px;
+  padding-bottom: 160px;
+}
+
 .padding-section-huge {
   padding-top: 160px;
   padding-bottom: 160px;
@@ -594,6 +599,49 @@ textarea {
 
 .standardhero-header {
   max-width: 900px;
+}
+
+/* ===== BALLOON / INFLATING LOGO SECTION ===== */
+.section_balloon {
+  position: relative;
+  width: 100%;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #000;
+}
+
+.baloon_component {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inflating-logo {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.doohpie-inflate-text {
+  font-size: clamp(4rem, 15vw, 12rem);
+  font-weight: 900;
+  color: #FF00C3;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  transform: scale(0.3);
+  opacity: 0;
+  filter: blur(10px);
+  transition: transform 0.1s ease-out, opacity 0.1s ease-out, filter 0.1s ease-out;
+  text-align: center;
+  line-height: 1;
+  will-change: transform, opacity, filter;
 }
 
 /* ===== SNAPSHOT / STATS SECTION ===== */
@@ -3006,31 +3054,164 @@ textarea {
   }
 }
 
-/* ===== SECTION PRESENCE (Enter Doohpieverse) ===== */
-.section_presence {
-  color: #fff;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+/* ===== SIZZLE VIDEO SECTION ===== */
+.section_sizzle {
+  padding: 0;
   position: relative;
 }
 
-.presence-divider-top,
-.presence-divider-bottom {
+.sizzle-wrapper {
+  padding: 0;
+}
+
+.result-casestudy-video {
   width: 100%;
-  height: var(--line-thickness, 1.5px);
-  background-color: var(--magenta, #ff00c3);
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  overflow: hidden;
 }
 
-.presence-divider-top {
-  position: absolute;
-  top: 0;
-  left: 0;
+.result-casestudy-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.presence-divider-bottom {
+/* ===== TEAM SECTION ===== */
+.section_team {
+  padding: 80px 0;
+}
+
+.team-section {
+  position: relative;
+}
+
+.team_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 2rem;
+}
+
+.lookat_heading {
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  line-height: 1;
+  grid-column: 1 / -1;
+}
+
+.team-block {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.team-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.team-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.4s ease;
+}
+
+.team-pink-block {
   position: absolute;
-  bottom: 0;
-  left: 0;
+  inset: 0;
+  background: #FF00C3;
+  color: #000;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.team-block:hover .team-pink-block {
+  opacity: 1;
+}
+
+.team-block:hover .team-photo {
+  opacity: 0;
+}
+
+.team-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.team-heading {
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.team-subtext {
+  font-size: 0.8rem;
+  line-height: 1.3;
+}
+
+.team-arrow {
+  width: 24px;
+  height: 24px;
+  margin-top: auto;
+  align-self: flex-end;
+}
+
+.project_detail {
+  display: none;
+}
+
+.team-detail {
+  padding: 0.75rem 0;
+}
+
+.team-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.job-title-text {
+  font-size: 0.75rem;
+  color: #888;
+}
+
+.text-color-grey {
+  color: #888;
+}
+
+@media screen and (max-width: 991px) {
+  .team_grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .team_grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  .lookat_heading {
+    grid-column: 1 / -1;
+  }
+}
+
+/* ===== SECTION PRESENCE (Enter Doohpieverse) ===== */
+.section_presence {
+  color: #fff;
+  padding-top: 0;
+  padding-bottom: 0;
+  position: relative;
 }
 
 .section_presence .padding-section-small {
@@ -3114,7 +3295,14 @@ textarea {
   height: 100%;
 }
 
+.show-mobile-landscape {
+  display: none;
+}
+
 @media screen and (max-width: 767px) {
+  .show-mobile-landscape {
+    display: block;
+  }
   .section_presence .padding-section-small {
     grid-template-columns: 1fr;
   }

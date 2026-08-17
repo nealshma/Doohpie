@@ -17,8 +17,8 @@ export const assets = {
   },
 
   ctaVideo: {
-    mp4: `${CDN}/672e2799473b9e1f1dc0eb5c/672e2799473b9e1f1dc0ee7e_BM%20CTA%20VIDEO-transcode.mp4`,
-    webm: `${CDN}/672e2799473b9e1f1dc0eb5c/672e2799473b9e1f1dc0ee7e_BM%20CTA%20VIDEO-transcode.webm`,
+    mp4: 'https://cdn.pixelkart.ai/uploads/2026/august/18/creative_43292a8c.mp4',
+    webm: 'https://cdn.pixelkart.ai/uploads/2026/august/18/creative_43292a8c.mp4',
     poster: `${CDN}/66475df67ffdeba1662d3da2%2F66475df67ffdeba1662d40bf_BM%20CTA%20VIDEO-poster-00001.jpg`,
   },
 
