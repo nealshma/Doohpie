@@ -23,7 +23,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/brand-fans" element={<BrandFans />} />
-          <Route path="/signup" element={<Signup />} />
+          <Route path="/influencer-sign-up" element={<Signup />} />
         </Routes>
       </Layout>
     </Router>

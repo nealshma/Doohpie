@@ -21,6 +21,7 @@ function Navbar() {
     { path: '/work', label: 'WORK' },
     { path: '/blog', label: 'BLOG' },
     { path: '/brand-fans', label: 'BRAND FANS' },
+    { path: '/influencer-sign-up', label: 'CREATOR SIGN UP' },
     { path: '/careers', label: 'CAREERS' },
     { path: '/contact', label: 'CONTACT' },
   ]
