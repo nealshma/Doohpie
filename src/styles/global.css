@@ -169,7 +169,7 @@ textarea {
 .margin-huge { margin: 96px; }
 
 /* ===== TYPOGRAPHY ===== */
-.text-size-huge {
+.text-size-large {
   font-size: clamp(3rem, 8vw, 6rem);
   font-weight: 700;
   line-height: 1.05;
@@ -2194,7 +2194,7 @@ textarea {
   text-align: right;
 }
 
-.text-size-huge.custom-homepage {
+.text-size-large.custom-homepage {
   font-size: clamp(2rem, 4vw, 3.5rem);
   font-weight: 500;
   line-height: 1.15;

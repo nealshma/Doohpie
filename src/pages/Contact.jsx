@@ -31,7 +31,7 @@ function Contact() {
           <div className="container-large">
             <div className="standardhero-component">
               <div className="standardhero-header">
-                <h1 className="text-size-huge">
+                <h1 className="text-size-large">
                   With teams across London, New York and Dubai, we combine global reach with local expertise.
                 </h1>
               </div>

@@ -73,7 +73,7 @@ function About() {
           <div className="container-large">
             <div className="padding-section-small">
               <div className="standardhero_component" data-animate>
-                <p className="text-size-huge">
+                <p className="text-size-large">
                   Doohpie is the independent Creator Company built for how brands grow now.
                 </p>
                 <h1 className="heading-style-h2 text-weight-normal hide">WHAT WE BELIEVE</h1>

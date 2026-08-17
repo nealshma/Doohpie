@@ -57,7 +57,7 @@ function BrandFans() {
           <div className="container-large">
             <div className="standardhero-component">
               <div className="standardhero-header">
-                <h1 className="text-size-huge">
+                <h1 className="text-size-large">
                   Brand Fans is Doohpie's approach to gifting — turning product sends into a scalable engine for content, conversation and advocacy.
                 </h1>
               </div>

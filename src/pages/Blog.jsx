@@ -36,7 +36,7 @@ function Blog() {
           <div className="container-large">
             <div className="standardhero-component">
               <div className="standardhero-header">
-                <h1 className="text-size-huge">
+                <h1 className="text-size-large">
                   Stories, insights and perspectives from the team behind The Creator Company.
                 </h1>
               </div>

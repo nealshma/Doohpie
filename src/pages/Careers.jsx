@@ -49,7 +49,7 @@ function Careers() {
       <section className="section-careerhero">
         <div className="padding-global">
           <div className="container-large">
-            <h1 className="text-size-huge">
+            <h1 className="text-size-large">
               At Doohpie, we're not just about creating exceptional brand content — we're about building a buzzing community of passionate, creative, and innovative individuals.
             </h1>
           </div>

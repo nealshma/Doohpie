@@ -57,7 +57,7 @@ function Work() {
           <div className="container-large">
             <div className="standardhero-component">
               <div className="standardhero-header">
-                <h1 className="text-size-huge">
+                <h1 className="text-size-large">
                   We've been at the heart of creator-led campaigns for over a decade.
                 </h1>
                 <p className="text-size-large" style={{ marginTop: 32, color: 'rgba(255,255,255,0.7)' }}>

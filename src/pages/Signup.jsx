@@ -38,7 +38,7 @@ function Signup() {
           <div className="container-large">
             <div className="standardhero-component">
               <div className="standardhero-header">
-                <h1 className="text-size-huge">
+                <h1 className="text-size-large">
                   You don't need to have the biggest followership to make the biggest impact.
                 </h1>
                 <p className="text-size-large" style={{ marginTop: 32, color: 'rgba(255,255,255,0.7)' }}>

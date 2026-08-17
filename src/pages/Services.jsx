@@ -40,7 +40,7 @@ function Services() {
           <div className="container-large">
             <div className="standardhero-component">
               <div className="standardhero-header">
-                <h1 className="text-size-huge">
+                <h1 className="text-size-large">
                   We're not a social or PR agency. Nor are we a talent agency. Doohpie is the independent Creator Company.
                 </h1>
                 <p className="text-size-large" style={{ marginTop: 32, color: 'rgba(255,255,255,0.7)' }}>

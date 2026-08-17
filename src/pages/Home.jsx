@@ -202,7 +202,7 @@ function Home() {
                 <div data-animate className="communities_eyebrow text-size-large text-style-allcaps text-align-right">
                   WHERE CULTURAL CREATIVITY MEETS COMMERCIAL AMBITION
                 </div>
-                <p data-animate className="text-size-huge custom-homepage">
+                <p data-animate className="text-size-large custom-homepage">
                   Culture is built by creators. They generate advocacy, set the pace of relevance, and create the kind of creative capital brands can't buy elsewhere.
                 </p>
               </div>
