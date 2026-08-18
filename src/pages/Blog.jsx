@@ -77,7 +77,7 @@ function Blog() {
                       style={{
                         padding: '8px 20px', borderRadius: 100,
                         border: '1px solid rgba(255,255,255,0.3)',
-                        background: activeTag === tag ? '#FF00C3' : 'transparent',
+                        background: activeTag === tag ? '#4cda56' : 'transparent',
                         color: '#fff', fontSize: '0.7rem', fontWeight: 600,
                         textTransform: 'uppercase', letterSpacing: '0.05em',
                         cursor: 'pointer', transition: 'all 0.3s ease',

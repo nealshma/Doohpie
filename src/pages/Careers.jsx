@@ -68,9 +68,9 @@ function Careers() {
                   {selectedTags.length > 0 && (
                     <div className="tag-button selected-tag is-all" onClick={() => setSelectedTags([])}>
                       <svg width="100%" height="100%" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="20" cy="20" r="19" transform="rotate(-90 20 20)" stroke="#FF00C3" strokeWidth="2" />
-                        <path d="M13 13L26.3102 26.3102" stroke="#FF00C3" strokeWidth="2" strokeLinecap="round" />
-                        <path d="M26.3096 13L12.9993 26.3102" stroke="#FF00C3" strokeWidth="2" strokeLinecap="round" />
+                        <circle cx="20" cy="20" r="19" transform="rotate(-90 20 20)" stroke="#4cda56" strokeWidth="2" />
+                        <path d="M13 13L26.3102 26.3102" stroke="#4cda56" strokeWidth="2" strokeLinecap="round" />
+                        <path d="M26.3096 13L12.9993 26.3102" stroke="#4cda56" strokeWidth="2" strokeLinecap="round" />
                       </svg>
                     </div>
                   )}

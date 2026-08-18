@@ -39,8 +39,8 @@ function TimePill({ timezone, city }) {
       <div className="icon-wrapper">
         <svg viewBox="0 0 102 102" width="100%" className="timezone-clock">
           <circle cx="50" cy="50" r="48" stroke="currentColor" strokeWidth="6" fill="none" />
-          <line x1="50" y1="50" x2="50" y2="25" stroke="white" strokeWidth="6" strokeLinecap="round" transform={`rotate(${hourAngle}, 50, 50)`} />
-          <line x1="50" y1="50" x2="50" y2="13" stroke="white" strokeWidth="6" strokeLinecap="round" transform={`rotate(${minuteAngle}, 50, 50)`} />
+          <line x1="50" y1="50" x2="50" y2="25" stroke="#4cda56" strokeWidth="6" strokeLinecap="round" transform={`rotate(${hourAngle}, 50, 50)`} />
+          <line x1="50" y1="50" x2="50" y2="13" stroke="#4cda56" strokeWidth="6" strokeLinecap="round" transform={`rotate(${minuteAngle}, 50, 50)`} />
         </svg>
       </div>
     </a>
@@ -90,8 +90,7 @@ function ProjectCard({ project, variant }) {
 
 function Home() {
   const heroLogoRef = useRef(null)
-
-  const weareLottieRef = useRef(null)
+  const svgDrawRef = useRef(null)
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -104,30 +103,20 @@ function Home() {
   }, [])
 
   useEffect(() => {
-    if (!weareLottieRef.current) return
-    const anim = lottie.loadAnimation({
-      container: weareLottieRef.current,
-      renderer: 'svg',
-      loop: false,
-      autoplay: false,
-      path: assets.lottie.scrollTrigger,
-    })
+    if (!svgDrawRef.current) return
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            anim.play()
+            entry.target.classList.add('animate')
             observer.disconnect()
           }
         })
       },
       { threshold: 0.3 }
     )
-    observer.observe(weareLottieRef.current)
-    return () => {
-      observer.disconnect()
-      anim.destroy()
-    }
+    observer.observe(svgDrawRef.current)
+    return () => observer.disconnect()
   }, [])
 
   useEffect(() => {
@@ -217,7 +206,33 @@ function Home() {
           <div className="container-large">
             <div className="padding-section-small">
               <div className="weare_component">
-                <div className="weare_lottie" ref={weareLottieRef}></div>
+                <div className="weare_svg-wrapper" ref={svgDrawRef}>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="-250 0 1200 728" width="950" height="728">
+                    {/* Stylish Cursive Script "D" */}
+                    <text x="-220" y="640"
+                          fontFamily="'Pinyon Script', 'Great Vibes', cursive"
+                          fontSize="620"
+                          fill="none"
+                          stroke="#4cda56"
+                          strokeWidth="3"
+                          strokeLinejoin="round"
+                          className="svg-draw-text">D</text>
+
+                    {/* Circular "M" Monogram Badge */}
+                    <g transform="translate(600,240)">
+                      <circle r="115" fill="none" stroke="#4cda56" strokeWidth="4"/>
+                      <circle r="100" fill="none" stroke="#4cda56" strokeWidth="2"/>
+                      <text x="0" y="38"
+                            textAnchor="middle"
+                            fontFamily="Liberation Serif, Georgia, serif"
+                            fontWeight="bold"
+                            fontSize="120"
+                            fill="none"
+                            stroke="#4cda56"
+                            strokeWidth="3">M</text>
+                    </g>
+                  </svg>
+                </div>
                 <h2 data-animate className="weare_heading">
                   WE ARE THE CREATOR COMPANY
                 </h2>
@@ -236,7 +251,6 @@ function Home() {
                 {/* Video card */}
                 <div className="homeservice_item hide-mobile-portrait is-service is-larger">
                   <div data-animate-scale className="homeservice_card">
-                    <img src={assets.svgs.frame1058} loading="lazy" alt="" className="homeservice_card-top" />
                     <div className="homeservice_image-wrapper">
                       <div className="homeservice_image is-video w-background-video w-background-video-atom">
                         <video
@@ -261,14 +275,13 @@ function Home() {
                 {/* Image card */}
                 <div className="homeservice_item hide-mobile-portrait is-service is-smaller">
                   <div data-animate-scale className="homeservice_card">
+                    <div className="homeservice_image-wrapper is-short">
+                      <img src={assets.homeservice.bellhueImage} loading="lazy" alt="" className="homeservice_image is-short" />
+                    </div>
                     <div className="homeservice_header">
                       <img src={assets.svgs.arrowRight} loading="lazy" alt="" className="homeservice_icon" />
                       <div className="homeservice_text">@BELLHUE</div>
                     </div>
-                    <div className="homeservice_image-wrapper is-short">
-                      <img src={assets.homeservice.bellhueImage} loading="lazy" alt="" className="homeservice_image is-short" />
-                    </div>
-                    <img src={assets.homeservice.group1115} loading="lazy" alt="" className="homeservice_card-top" />
                   </div>
                 </div>
 

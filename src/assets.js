@@ -1,3 +1,20 @@
+import clientLogo1 from './assets/client-logos/Client-Logos-1.svg'
+import clientLogo2 from './assets/client-logos/Client-Logos-2.svg'
+import clientLogo3 from './assets/client-logos/Client-Logos-3.svg'
+import clientLogo4 from './assets/client-logos/Client-Logos-4.svg'
+import clientLogo5 from './assets/client-logos/Client-Logos-5.svg'
+import clientLogo6 from './assets/client-logos/Client-Logos-6.svg'
+import clientLogo7 from './assets/client-logos/Client-Logos-7.svg'
+import clientLogo8 from './assets/client-logos/Client-Logos-8.svg'
+import clientLogo9 from './assets/client-logos/Client-Logos-9.svg'
+import clientLogo10 from './assets/client-logos/Client-Logos-10.svg'
+import clientLogo11 from './assets/client-logos/Client-Logos-11.svg'
+import clientLogo12 from './assets/client-logos/Client-Logos-12.svg'
+import clientLogo13 from './assets/client-logos/Client-Logos-13.svg'
+import clientLogo14 from './assets/client-logos/Client-Logos-14.svg'
+import clientLogo15 from './assets/client-logos/Client-Logos-15.svg'
+import clientLogo16 from './assets/client-logos/Client-Logos-16.svg'
+
 const CDN = 'https://cdn.prod.website-files.com'
 
 export const assets = {
@@ -8,17 +25,17 @@ export const assets = {
   },
 
   hero: {
-    desktopVideo: `${CDN}/672e2799473b9e1f1dc0eb5c/672e2799473b9e1f1dc0ef0f_BM%20WEB%20HEADER%20DESKTOP%20COMPRESSED%202-transcode.mp4`,
-    desktopWebm: `${CDN}/672e2799473b9e1f1dc0eb5c/672e2799473b9e1f1dc0ef0f_BM%20WEB%20HEADER%20DESKTOP%20COMPRESSED%202-transcode.webm`,
+    desktopVideo: 'https://cdn.pixelkart.ai/uploads/2026/august/18/creative_c23c590b.mp4',
+    desktopWebm: 'https://cdn.pixelkart.ai/uploads/2026/august/18/creative_c23c590b.mp4',
     desktopPoster: `${CDN}/66475df67ffdeba1662d3da2%2F664cd17fae41cd220c7a8a87_BM%20WEB%20HEADER%20DESKTOP%20COMPRESSED%202-poster-00001.jpg`,
-    mobileVideo: `${CDN}/672e2799473b9e1f1dc0eb5c/672e2799473b9e1f1dc0ef10_BM%20WEB%20HEADER%20MOBILE%20COMPRESSED%202-transcode.mp4`,
-    mobileWebm: `${CDN}/672e2799473b9e1f1dc0eb5c/672e2799473b9e1f1dc0ef10_BM%20WEB%20HEADER%20MOBILE%20COMPRESSED%202-transcode.webm`,
+    mobileVideo: 'https://cdn.pixelkart.ai/uploads/2026/august/18/creative_c23c590b.mp4',
+    mobileWebm: 'https://cdn.pixelkart.ai/uploads/2026/august/18/creative_c23c590b.mp4',
     mobilePoster: `${CDN}/66475df67ffdeba1662d3da2%2F664dba32f70348fa70e2c2e2_BM%20WEB%20HEADER%20MOBILE%20COMPRESSED%202-poster-00001.jpg`,
   },
 
   ctaVideo: {
-    mp4: 'https://cdn.pixelkart.ai/uploads/2026/august/18/creative_43292a8c.mp4',
-    webm: 'https://cdn.pixelkart.ai/uploads/2026/august/18/creative_43292a8c.mp4',
+    mp4: 'https://cdn.pixelkart.ai/uploads/2026/august/19/creative_0f370092.mp4',
+    webm: 'https://cdn.pixelkart.ai/uploads/2026/august/19/creative_0f370092.mp4',
     poster: `${CDN}/66475df67ffdeba1662d3da2%2F66475df67ffdeba1662d40bf_BM%20CTA%20VIDEO-poster-00001.jpg`,
   },
 
@@ -52,22 +69,22 @@ export const assets = {
   map: `${CDN}/672e2799473b9e1f1dc0eb5c/698cbd411f0df50b29f3c937_Map.svg`,
 
   clientLogos: [
-    `${CDN}/672e2799473b9e1f1dc0eb5c/6751d799f4ddd252340ad5ef_Client-Logos%20(1).svg`,
-    `${CDN}/672e2799473b9e1f1dc0eb5c/6751d79a753950ef7615e40d_Client-Logos%20(13).svg`,
-    `${CDN}/672e2799473b9e1f1dc0eb5c/6751d7997feadfea359b3480_Client-Logos%20(6).svg`,
-    `${CDN}/672e2799473b9e1f1dc0eb5c/6751d799c53e15bd675eb0e1_Client-Logos%20(14).svg`,
-    `${CDN}/672e2799473b9e1f1dc0eb5c/6751d79968ec803f3d0ecf58_Client-Logos%20(11).svg`,
-    `${CDN}/672e2799473b9e1f1dc0eb5c/6751d7996728a82044cfd136_Client-Logos%20(5).svg`,
-    `${CDN}/672e2799473b9e1f1dc0eb5c/6751d799dee900c42308a472_Client-Logos%20(7).svg`,
-    `${CDN}/672e2799473b9e1f1dc0eb5c/6751d79b173d450f3e2c689d_Client-Logos%20(16).svg`,
-    `${CDN}/672e2799473b9e1f1dc0eb5c/6751d799a3653d4bb8989814_Client-Logos%20(8).svg`,
-    `${CDN}/672e2799473b9e1f1dc0eb5c/6751d799135db847d0b57fbe_Client-Logos%20(12).svg`,
-    `${CDN}/672e2799473b9e1f1dc0eb5c/6751d79a375fe1ec7066aba8_Client-Logos%20(9).svg`,
-    `${CDN}/672e2799473b9e1f1dc0eb5c/6751d7994905fc5118c2b74c_Client-Logos%20(3).svg`,
-    `${CDN}/672e2799473b9e1f1dc0eb5c/6751d799d664f57f4db38e50_Client-Logos%20(15).svg`,
-    `${CDN}/672e2799473b9e1f1dc0eb5c/6751d799e673903ace382c1c_Client-Logos%20(4).svg`,
-    `${CDN}/672e2799473b9e1f1dc0eb5c/6751d799ff6c14082a1d2fc8_Client-Logos%20(10).svg`,
-    `${CDN}/672e2799473b9e1f1dc0eb5c/6751d799dee900c42308a46d_Client-Logos%20(2).svg`,
+    clientLogo1,
+    clientLogo2,
+    clientLogo3,
+    clientLogo4,
+    clientLogo5,
+    clientLogo6,
+    clientLogo7,
+    clientLogo8,
+    clientLogo9,
+    clientLogo10,
+    clientLogo11,
+    clientLogo12,
+    clientLogo13,
+    clientLogo14,
+    clientLogo15,
+    clientLogo16,
   ],
 
   work: {

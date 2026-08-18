@@ -82,7 +82,7 @@ function Work() {
                   </div>
                 ))}
               </div>
-              <div style={{ padding: 48, background: '#FF00C3' }}>
+              <div style={{ padding: 48, background: '#4cda56' }}>
                 <h2 style={{ fontSize: 'clamp(3rem, 8vw, 6rem)', fontWeight: 700, color: '#fff', lineHeight: 1 }}>{featuredCaseStudy.brand}</h2>
                 <p style={{ fontSize: '1.1rem', marginTop: 16, color: 'rgba(255,255,255,0.9)' }}>{featuredCaseStudy.description}</p>
               </div>
@@ -132,7 +132,7 @@ function Work() {
                   <div className="casestudy-card" key={i}>
                     <img src={cs.image} alt={cs.brand} className="casestudy-image" />
                     <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: 32, background: 'linear-gradient(transparent, rgba(0,0,0,0.9))' }}>
-                      <div style={{ fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.1em', color: '#FF00C3', marginBottom: 8 }}>{cs.brand}</div>
+                      <div style={{ fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.1em', color: '#4cda56', marginBottom: 8 }}>{cs.brand}</div>
                       <h3 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: 8 }}>{cs.title}</h3>
                       <p style={{ fontSize: '0.9rem', color: 'rgba(255,255,255,0.7)', marginBottom: 16 }}>{cs.description}</p>
                       <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
