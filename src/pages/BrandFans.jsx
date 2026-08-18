@@ -384,7 +384,6 @@ function BrandFans() {
         </div>
       </section>
 
-      {/* Presence / Enter Doohpieverse Section */}
       <section className="section_presence">
         <div className="padding-global">
           <div className="container-large">
