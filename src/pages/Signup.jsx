@@ -93,7 +93,7 @@ function Signup() {
   }
 
   return (
-    <>
+    <div className="page-content-wrapper page-content-top">
       {/* Hero */}
       <section className="section_influencer">
         <div className="padding-global">
@@ -411,7 +411,7 @@ function Signup() {
           </div>
         </div>
       </section>
-    </>
+    </div>
   )
 }
 

@@ -176,7 +176,7 @@ function BrandFans() {
   }, [])
 
   return (
-    <>
+    <div className="page-content-wrapper page-content-top">
       {/* Hero Section */}
       <section className="section_standardhero">
         <div className="padding-global">
@@ -460,7 +460,7 @@ function BrandFans() {
           </div>
         </div>
       </section>
-    </>
+    </div>
   )
 }
 

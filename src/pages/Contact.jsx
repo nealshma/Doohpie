@@ -75,7 +75,7 @@ function Contact() {
   }
 
   return (
-    <>
+    <div className="page-content-wrapper page-content-top">
       {/* Hero */}
       <section className="section_standardhero">
         <div className="padding-global">
@@ -349,7 +349,7 @@ function Contact() {
           </div>
         </div>
       </section>
-    </>
+    </div>
   )
 }
 

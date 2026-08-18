@@ -57,7 +57,7 @@ function About() {
 
       textEl.style.transform = `scale(${scale})`
       textEl.style.opacity = opacity
-      textEl.style.filter = `blur(${blur}px)`
+      textEl.style.filter = `blur(${blur}px) brightness(0) invert(48%) sepia(85%) saturate(650%) hue-rotate(85deg)`
     }
 
     window.addEventListener('scroll', handleScroll, { passive: true })
@@ -66,14 +66,14 @@ function About() {
   }, [])
 
   return (
-    <>
+    <div className="page-content-wrapper about-page-wrapper">
       {/* Standard Hero Section with Balloon */}
       <section className="section_standardhero" ref={heroRef}>
         <div className="padding-global">
           <div className="container-large">
             <div className="padding-section-small">
               <div className="standardhero_component" data-animate>
-                <p className="text-size-large">
+                <p className="text-size-medium about-hero-text">
                   Doohpie is the independent Creator Company built for how brands grow now.
                 </p>
                 <h1 className="heading-style-h2 text-weight-normal hide">WHAT WE BELIEVE</h1>
@@ -91,9 +91,12 @@ function About() {
               </div>
               <div className="baloon_component">
                 <div className="inflating-logo">
-                  <div className="doohpie-inflate-text" ref={doohpieTextRef}>
-                    Doohpie
-                  </div>
+                  <img 
+                    src="https://cdn.pixelkart.ai/uploads/2026/august/18/creative_35391abd.png" 
+                    alt="Doohpie" 
+                    className="doohpie-inflate-img" 
+                    ref={doohpieTextRef}
+                  />
                 </div>
               </div>
             </div>
@@ -296,7 +299,7 @@ function About() {
           </div>
         </div>
       </section>
-    </>
+    </div>
   )
 }
 

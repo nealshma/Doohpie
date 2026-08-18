@@ -5,6 +5,31 @@
   padding: 0;
 }
 
+/* ===== HOME PAGE WRAPPER ===== */
+.home-page-wrapper {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+}
+
+/* ===== PAGE CONTENT WRAPPER ===== */
+.page-content-wrapper {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+}
+
+.about-page-wrapper {
+  padding-top: 8rem;
+}
+
+.page-content-top {
+  padding-top: 8rem;
+}
+
+.about-hero-text {
+  white-space: nowrap;
+  font-size: clamp(0.5rem, 2vw, 1.5rem);
+}
+
 html {
   height: auto;
   scroll-behavior: auto;
@@ -285,6 +310,16 @@ textarea {
   width: 100%;
   height: var(--line-thickness, 1.5px);
   background-color: var(--magenta, #4cda56);
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  transform: translate3d(0px, 0px, 0px) scale3d(0, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease-out;
+}
+
+.divider.animate {
+  transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  transform-style: preserve-3d;
 }
 
 .divider._5-top {
@@ -354,7 +389,7 @@ textarea {
 .navbar_logo-img {
   width: 150px;
   height: auto;
-  filter: brightness(0) invert(0.47) sepia(1) saturate(5) hue-rotate(85deg);
+  filter: brightness(0) invert(48%) sepia(85%) saturate(650%) hue-rotate(85deg);
 }
 
 .navbar_links {
@@ -649,6 +684,22 @@ textarea {
   text-align: center;
   line-height: 1;
   will-change: transform, opacity, filter;
+}
+
+.doohpie-inflate-img {
+  width: clamp(200px, 40vw, 600px);
+  height: auto;
+  filter: brightness(0) invert(48%) sepia(85%) saturate(650%) hue-rotate(85deg);
+  transform: scale(0.3);
+  opacity: 0;
+  transition: transform 0.1s ease-out, opacity 0.1s ease-out, filter 0.1s ease-out;
+  text-align: center;
+  will-change: transform, opacity, filter;
+}
+
+.doohpie-inflate-img.animate {
+  transform: scale(1);
+  opacity: 1;
 }
 
 /* ===== SNAPSHOT / STATS SECTION ===== */

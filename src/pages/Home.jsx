@@ -138,7 +138,7 @@ function Home() {
 
 
   return (
-    <>
+    <div className="home-page-wrapper">
       {/* Hero Section */}
       <section className="section_hero is-homepage">
         <div className="homepage_slider_video is-desktop w-background-video w-background-video-atom">
@@ -565,7 +565,7 @@ function Home() {
           </div>
         </div>
       </section>
-    </>
+    </div>
   )
 }
 

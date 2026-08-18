@@ -25,7 +25,7 @@ function Careers() {
   }
 
   return (
-    <>
+    <div className="page-content-wrapper page-content-top">
       {/* Hero */}
       <section className="section_careerhero">
         <div className="padding-global">
@@ -169,7 +169,7 @@ function Careers() {
           </div>
         </div>
       </section>
-    </>
+    </div>
   )
 }
 
