@@ -4355,3 +4355,29 @@ textarea {
     stroke-dashoffset: 0;
   }
 }
+
+/* ===== TYPING ANIMATION ===== */
+.typing-text {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+}
+
+.typing-line-1 {
+  animation: typing-line1 1s steps(10, end) 1.5s forwards;
+}
+
+.typing-line-2 {
+  animation: typing-line2 1s steps(17, end) 2.5s forwards;
+}
+
+@keyframes typing-line1 {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes typing-line2 {
+  from { width: 0; }
+  to { width: 100%; }
+}

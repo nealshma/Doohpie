@@ -284,8 +284,9 @@ function Home() {
                     </g>
                   </svg>
                 </div>
-                <h2 data-animate className="weare_heading">
-                  WE ARE THE CREATOR COMPANY
+                <h2 data-animate className="weare_heading is-visible">
+                  <span className="typing-text typing-line-1">WE ARE THE</span><br />
+                  <span className="typing-text typing-line-2">CREATOR COMPANY</span>
                 </h2>
               </div>
             </div>
