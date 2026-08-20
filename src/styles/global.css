@@ -2965,12 +2965,15 @@ textarea {
   width: 100%;
   padding: 0;
   background-color: transparent;
+  overflow: hidden;
 }
 
 .logo_logo {
   width: 100%;
   height: auto;
   object-fit: contain;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
 }
 
 @media screen and (max-width: 991px) {
