@@ -4324,12 +4324,30 @@ textarea {
 
 /* ===== SVG DRAW ANIMATION ===== */
 .svg-draw-text {
-  stroke-dasharray: 3000;
-  stroke-dashoffset: 3000;
+  stroke-dasharray: 5500;
+  stroke-dashoffset: 5500;
+}
+
+.svg-draw-circle {
+  stroke-dasharray: 700;
+  stroke-dashoffset: 700;
+}
+
+.svg-draw-text-m {
+  stroke-dasharray: 600;
+  stroke-dashoffset: 600;
 }
 
 .weare_svg-wrapper.animate .svg-draw-text {
   animation: svgDraw 3s ease-out forwards;
+}
+
+.weare_svg-wrapper.animate .svg-draw-circle {
+  animation: svgDraw 2s ease-out forwards;
+}
+
+.weare_svg-wrapper.animate .svg-draw-text-m {
+  animation: svgDraw 2s ease-out 0.5s forwards;
 }
 
 @keyframes svgDraw {

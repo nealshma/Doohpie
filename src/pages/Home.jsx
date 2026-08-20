@@ -257,29 +257,30 @@ function Home() {
             <div className="padding-section-small">
               <div className="weare_component">
                 <div className="weare_svg-wrapper" ref={svgDrawRef}>
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="-250 0 1200 728" width="950" height="728">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="-250 0 1500 1000" width="950" height="850">
                     {/* Stylish Cursive Script "D" */}
-                    <text x="-220" y="640"
+                    <text x="-220" y="950"
                           fontFamily="'Pinyon Script', 'Great Vibes', cursive"
-                          fontSize="620"
+                          fontSize="1100"
                           fill="none"
                           stroke="#4cda56"
-                          strokeWidth="3"
+                          strokeWidth="5"
                           strokeLinejoin="round"
                           className="svg-draw-text">D</text>
 
                     {/* Circular "M" Monogram Badge */}
-                    <g transform="translate(600,240)">
-                      <circle r="115" fill="none" stroke="#4cda56" strokeWidth="4"/>
-                      <circle r="100" fill="none" stroke="#4cda56" strokeWidth="2"/>
-                      <text x="0" y="38"
+                    <g transform="translate(850,400)">
+                      <circle r="90" fill="none" stroke="#4cda56" strokeWidth="4" className="svg-draw-circle"/>
+                      <circle r="78" fill="none" stroke="#4cda56" strokeWidth="2" className="svg-draw-circle"/>
+                      <text x="0" y="28"
                             textAnchor="middle"
                             fontFamily="Liberation Serif, Georgia, serif"
                             fontWeight="bold"
-                            fontSize="120"
+                            fontSize="90"
                             fill="none"
                             stroke="#4cda56"
-                            strokeWidth="3">M</text>
+                            strokeWidth="3"
+                            className="svg-draw-text-m">M</text>
                     </g>
                   </svg>
                 </div>
