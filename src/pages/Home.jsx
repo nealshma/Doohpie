@@ -88,9 +88,55 @@ function ProjectCard({ project, variant }) {
   )
 }
 
+function useReliableVideo(ref) {
+  useEffect(() => {
+    const video = ref.current
+    if (!video) return
+
+    let retryTimeout = null
+
+    const tryPlay = () => {
+      const playPromise = video.play()
+      if (playPromise !== undefined) {
+        playPromise.catch(() => {
+          retryTimeout = setTimeout(tryPlay, 200)
+        })
+      }
+    }
+
+    const onEnded = () => {
+      video.currentTime = 0
+      tryPlay()
+    }
+
+    video.addEventListener('ended', onEnded)
+    tryPlay()
+
+    const handleVisibility = () => {
+      if (document.hidden) {
+        video.pause()
+      } else {
+        tryPlay()
+      }
+    }
+    document.addEventListener('visibilitychange', handleVisibility)
+
+    return () => {
+      video.removeEventListener('ended', onEnded)
+      document.removeEventListener('visibilitychange', handleVisibility)
+      clearTimeout(retryTimeout)
+    }
+  }, [ref])
+}
+
 function Home() {
   const heroLogoRef = useRef(null)
   const svgDrawRef = useRef(null)
+  const desktopVideoRef = useRef(null)
+  const mobileVideoRef = useRef(null)
+
+  useReliableVideo(desktopVideoRef)
+  useReliableVideo(mobileVideoRef)
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -143,26 +189,30 @@ function Home() {
       <section className="section_hero is-homepage">
         <div className="homepage_slider_video is-desktop w-background-video w-background-video-atom">
           <video
+            ref={desktopVideoRef}
             autoPlay
             loop
             muted
             playsInline
-            style={{ backgroundImage: `url("${assets.hero.desktopPoster}")`, objectFit: 'cover', width: '100%', height: '100%' }}
+            preload="auto"
+            poster={assets.hero.desktopPoster}
+            style={{ objectFit: 'cover', width: '100%', height: '100%' }}
           >
-            <source src={assets.hero.desktopVideo} />
-            <source src={assets.hero.desktopWebm} />
+            <source src={assets.hero.desktopVideo} type="video/mp4" />
           </video>
         </div>
         <div className="homepage_slider_video is-mobile w-background-video w-background-video-atom">
           <video
+            ref={mobileVideoRef}
             autoPlay
             loop
             muted
             playsInline
-            style={{ backgroundImage: `url("${assets.hero.mobilePoster}")`, objectFit: 'cover', width: '100%', height: '100%' }}
+            preload="auto"
+            poster={assets.hero.mobilePoster}
+            style={{ objectFit: 'cover', width: '100%', height: '100%' }}
           >
-            <source src={assets.hero.mobileVideo} />
-            <source src={assets.hero.mobileWebm} />
+            <source src={assets.hero.mobileVideo} type="video/mp4" />
           </video>
           <div className="logo-mask-mobile_wrapper homepage">
             <a href="#" className="logo-mask-mobile">
