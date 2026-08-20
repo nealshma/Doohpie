@@ -280,7 +280,7 @@ function Home() {
                             fill="none"
                             stroke="#4cda56"
                             strokeWidth="3"
-                            className="svg-draw-text-m">M</text>
+                            className="svg-draw-text-m">π</text>
                     </g>
                   </svg>
                 </div>
@@ -313,7 +313,6 @@ function Home() {
                           style={{ backgroundImage: `url("${assets.homeservice.bf8Poster}")`, objectFit: 'cover', width: '100%', height: '100%' }}
                         >
                           <source src={assets.homeservice.bf8Video} />
-                          <source src={assets.homeservice.bf8Webm} />
                         </video>
                       </div>
                     </div>
