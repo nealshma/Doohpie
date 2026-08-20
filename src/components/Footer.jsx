@@ -152,7 +152,7 @@ function Footer() {
                   src={assets.logo.white}
                   alt="Doohpie Logo"
                   className="buttermilk-large-wide"
-                  style={{ filter: 'brightness(0) invert(1)', opacity: 0.3 }}
+                  style={{ filter: 'brightness(0) invert(1)', opacity: 1 }}
                 />
                 <div className="footer_padding">
                   <div className="margin-top margin-small">
