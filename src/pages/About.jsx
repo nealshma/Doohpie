@@ -1,5 +1,21 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { assets } from '../assets'
+
+function AnimatedCounter({ target, prefix = '', suffix = '', duration = 2000, isVisible }) {
+  const [count, setCount] = useState(0)
+  useEffect(() => {
+    if (!isVisible) return
+    let start = 0
+    const increment = target / (duration / 16)
+    const timer = setInterval(() => {
+      start += increment
+      if (start >= target) { setCount(target); clearInterval(timer) }
+      else { setCount(Math.floor(start)) }
+    }, 16)
+    return () => clearInterval(timer)
+  }, [isVisible, target, duration])
+  return <span>{prefix}{count}{suffix}</span>
+}
 
 const teamMembers = [
   { name: 'Jamie Ray', role: 'Co-founder', image: assets.about.jamieRay, bio: 'Jamie is the Co-Founder and CEO at Doohpie. He focuses on driving global brand partnerships and community-first creator marketing strategies for brands like Armani and Prada Beauty, GAP, Primark and Marc Jacobs, propelling Doohpie\'s independent growth in the UK and the US.' },
@@ -21,6 +37,17 @@ const teamMembers = [
 function About() {
   const doohpieTextRef = useRef(null)
   const heroRef = useRef(null)
+  const snapshotRef = useRef(null)
+  const [snapshotVisible, setSnapshotVisible] = useState(false)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) setSnapshotVisible(true) },
+      { threshold: 0.3 }
+    )
+    if (snapshotRef.current) observer.observe(snapshotRef.current)
+    return () => observer.disconnect()
+  }, [])
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -115,42 +142,42 @@ function About() {
                   Brands need advocacy in the short term, cultural capital for the long term, and business impact always - because relevance only matters if it drives revenue.
                 </p>
               </div>
-              <div className="snapshot_component" data-animate>
+              <div className="snapshot_component" data-animate ref={snapshotRef}>
                 <h2 className="snapshot-heading hide-tablet">
                   AGENCY<br />SNAPSHOT
                 </h2>
                 <div className="snapshot-wrapper">
                   <div className="snapshop-block">
                     <div className="snapshot-header-text">People</div>
-                    <div className="snapshot-text">145+</div>
+                    <div className="snapshot-text"><AnimatedCounter target={145} suffix="+" isVisible={snapshotVisible} /></div>
                     <div className="snapshot-para text-size-mobile-tiny">
                       Our team is growing but we'll always be our own community.
                     </div>
                   </div>
                   <div className="snapshop-block">
                     <div className="snapshot-header-text">Global Reach</div>
-                    <div className="snapshot-text">8</div>
+                    <div className="snapshot-text"><AnimatedCounter target={8} isVisible={snapshotVisible} /></div>
                     <div className="snapshot-para text-size-mobile-tiny">
                       Outside of our London HQ, we have locations in New York, Dubai, Rio and beyond.
                     </div>
                   </div>
                   <div className="snapshop-block">
                     <div className="snapshot-header-text">Creators</div>
-                    <div className="snapshot-text">500k+</div>
+                    <div className="snapshot-text"><AnimatedCounter target={500} suffix="k+" isVisible={snapshotVisible} /></div>
                     <div className="snapshot-para text-size-mobile-tiny">
                       Our creator network spans every niche, platform and geography.
                     </div>
                   </div>
                   <div className="snapshop-block">
                     <div className="snapshot-header-text">Campaigns</div>
-                    <div className="snapshot-text">3000+</div>
+                    <div className="snapshot-text"><AnimatedCounter target={3000} suffix="+" isVisible={snapshotVisible} /></div>
                     <div className="snapshot-para text-size-mobile-tiny">
                       From always-on to hero moments, we've executed thousands.
                     </div>
                   </div>
                   <div className="snapshop-block">
                     <div className="snapshot-header-text">Revenue</div>
-                    <div className="snapshot-text">$1B+</div>
+                    <div className="snapshot-text"><AnimatedCounter target={1} prefix="$" suffix="B+" isVisible={snapshotVisible} /></div>
                     <div className="snapshot-para text-size-mobile-tiny">
                       Driven for our clients through creator-led commerce.
                     </div>
