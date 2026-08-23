@@ -568,7 +568,6 @@ textarea {
   display: block;
   position: relative;
   margin-left: calc(50% - 54vw);
-  image-rendering: -webkit-optimize-contrast;
 }
 
 /* Hero logo overlay */

@@ -95,29 +95,57 @@ function useReliableVideo(ref) {
     if (!video) return
 
     let retryTimeout = null
+    let started = false
 
-    const tryPlay = () => {
+    const bufferedAheadOf = () => {
+      let ahead = 0
+      for (let i = 0; i < video.buffered.length; i++) {
+        if (video.buffered.start(i) <= video.currentTime && video.currentTime < video.buffered.end(i)) {
+          ahead = video.buffered.end(i) - video.currentTime
+        }
+      }
+      return ahead
+    }
+
+    // Only start playback once enough data is buffered so it never stalls on the first frames
+    const startWhenReady = () => {
+      if (started) return
+      if (video.readyState < 3 || bufferedAheadOf() < 2) {
+        retryTimeout = setTimeout(startWhenReady, 150)
+        return
+      }
+      started = true
       const playPromise = video.play()
       if (playPromise !== undefined) {
         playPromise.catch(() => {
-          retryTimeout = setTimeout(tryPlay, 200)
+          started = false
+          retryTimeout = setTimeout(startWhenReady, 200)
+        })
+      }
+    }
+
+    const ensurePlay = () => {
+      const playPromise = video.play()
+      if (playPromise !== undefined) {
+        playPromise.catch(() => {
+          retryTimeout = setTimeout(ensurePlay, 200)
         })
       }
     }
 
     const onEnded = () => {
       video.currentTime = 0
-      tryPlay()
+      ensurePlay()
     }
 
     video.addEventListener('ended', onEnded)
-    tryPlay()
+    startWhenReady()
 
     const handleVisibility = () => {
       if (document.hidden) {
         video.pause()
       } else {
-        tryPlay()
+        ensurePlay()
       }
     }
     document.addEventListener('visibilitychange', handleVisibility)
@@ -195,7 +223,6 @@ function Home() {
         <div className="homepage_slider_video is-desktop w-background-video w-background-video-atom">
           <video
             ref={desktopVideoRef}
-            autoPlay
             loop
             muted
             playsInline
@@ -209,7 +236,6 @@ function Home() {
         <div className="homepage_slider_video is-mobile w-background-video w-background-video-atom">
           <video
             ref={mobileVideoRef}
-            autoPlay
             loop
             muted
             playsInline

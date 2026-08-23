@@ -157,11 +157,9 @@ function Footer() {
             <div className="margin-bottom margin-large is-footer">
               <div className="margin-top margin-large">
                 <svg width="0" height="0" style={{ position: 'absolute' }} aria-hidden="true">
-                  <filter id="logo-sharpen" x="-5%" y="-5%" width="110%" height="110%">
-                    <feConvolveMatrix order="3" preserveAlpha="true" kernelMatrix="0 -1.4 0 -1.4 7.6 -1.4 0 -1.4 0" />
-                    <feComponentTransfer>
-                      <feFuncA type="gamma" exponent="1.15" amplitude="1.05" />
-                    </feComponentTransfer>
+                  <filter id="logo-sharpen" x="-5%" y="-5%" width="110%" height="110%" colorInterpolationFilters="sRGB">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="0.55" result="blurred" />
+                    <feComposite in="SourceGraphic" in2="blurred" operator="arithmetic" k1="0" k2="1.75" k3="-0.75" k4="0" />
                   </filter>
                 </svg>
                 <img
