@@ -5,49 +5,30 @@ import PresenceSection from '../components/PresenceSection'
 const CDN = 'https://cdn.prod.website-files.com'
 
 const starburstImages = [
-  `${CDN}/672e2799473b9e1f1dc0eb5c/675d8910a0f9a2c6b4957ad1_brand%20fan%205.jpg`,
-  `${CDN}/672e2799473b9e1f1dc0eb5c/675d8969e99eb5e50b6df826_brand%20fan%206.jpg`,
-  `${CDN}/672e2799473b9e1f1dc0eb5c/672e2799473b9e1f1dc0ebed_Copy%20of%20Post%202%20-%20Slide%201%20copy.webp`,
-  `${CDN}/672e2799473b9e1f1dc0eb5c/675d8a3c2a7f86829500eb70_brand%20fan%208.jpg`,
-  `${CDN}/672e2799473b9e1f1dc0eb5c/675d88b5a418842ecc3c5493_brand%20fan%203.png`,
-  `${CDN}/672e2799473b9e1f1dc0eb5c/675d884adb46613c08dc5911_brand%20fan%202.png`,
-  `${CDN}/672e2799473b9e1f1dc0eb5c/675d8814171b101b7e123fec_brand%20fan%201.png`,
-  `${CDN}/672e2799473b9e1f1dc0eb5c/675d86766cf30640db2c4d35_daniellejinadu%20-%20post1.jpeg`,
+  'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Advertising_Column_in_Berlin_on_2026-05-21.jpg/960px-Advertising_Column_in_Berlin_on_2026-05-21.jpg',
+  'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Mitte_Litfa%C3%9Fplatz-001.JPG/960px-Mitte_Litfa%C3%9Fplatz-001.JPG',
+  'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Berlin_-_Litfass-Platz_%28Litfass_Square%29_-_geo.hlipp.de_-_34984.jpg/960px-Berlin_-_Litfass-Platz_%28Litfass_Square%29_-_geo.hlipp.de_-_34984.jpg',
+  'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Bus_shelter%2C_York_-_geograph.org.uk_-_8361360.jpg/960px-Bus_shelter%2C_York_-_geograph.org.uk_-_8361360.jpg',
+  'https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Architect-designed_bus_shelter_on_Princes_Street_-_geograph.org.uk_-_4615259.jpg/960px-Architect-designed_bus_shelter_on_Princes_Street_-_geograph.org.uk_-_4615259.jpg',
+  'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Toopranpet_bus_shelter_-_Mapillary_%281276860037147020%29.jpg/960px-Toopranpet_bus_shelter_-_Mapillary_%281276860037147020%29.jpg',
+  'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Times_Square_shuttle_platform_3_vc.jpg/960px-Times_Square_shuttle_platform_3_vc.jpg',
+  'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/ADVERTISING_ALONG_THE_WALLS_OF_A_SUBWAY_PLATFORM_ON_THE_LEXINGTON_AVENUE_LINE_HAS_BEEN_DEFACED_WITH_GRAFFITI._POLICE..._-_NARA_-_556664.jpg/960px-ADVERTISING_ALONG_THE_WALLS_OF_A_SUBWAY_PLATFORM_ON_THE_LEXINGTON_AVENUE_LINE_HAS_BEEN_DEFACED_WITH_GRAFFITI._POLICE..._-_NARA_-_556664.jpg',
+  'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Wikipedia_Times_Square_Billboard_14.jpg/960px-Wikipedia_Times_Square_Billboard_14.jpg',
 ]
 
 const cultureImages = [
-  `${CDN}/672e2799473b9e1f1dc0eb5c/675c159f87bb7cf88a6e4ae4_%40bri.constantine%20GAP%20November%20Cashsoft%20Image%204.png`,
-  `${CDN}/672e2799473b9e1f1dc0eb5c/675d870fc02f9846ab75a7dd_brand%20fan%20page.png`,
-  `${CDN}/672e2799473b9e1f1dc0eb5c/675d876225ff5aab4c8af867_oliviaandalice_273503988_661247975121632_7829573494172534138_n.png`,
-  `${CDN}/672e2799473b9e1f1dc0eb5c/675d86751f3bd8d92a960038_Snapinsta.app_434139856_1583761455718797_5916736748529123286_n_1080.jpg`,
-  `${CDN}/672e2799473b9e1f1dc0eb5c/675d86763ac8d2de4ca46ccf_%40stylebymarthaa%20-%20IG%20-%20Future%20Fits%20-%20UK%20-%20Earned%20Content%202..jpg`,
-]
-
-const scrollingVideosCol1 = [
-  'https://files.tryflowdrive.com/org-e2ca5fe0-6b56-4f6f-825c-f639e3b7651c/file-ef8c355e-fae9-496f-9e6f-72028a9e0f05_GAP-BF.mov',
-  'https://files.tryflowdrive.com/549/file-0b71b6c7-d148-427f-b5b5-428c5acdcf99_Copy-of-Anastazja-X-GAP.mp4',
-]
-
-const scrollingVideosCol2 = [
-  'https://files.tryflowdrive.com/org-e2ca5fe0-6b56-4f6f-825c-f639e3b7651c/file-d1095144-8379-4184-a8ee-06c6330f9e76_BF-7.mp4',
-  'https://files.tryflowdrive.com/org-e2ca5fe0-6b56-4f6f-825c-f639e3b7651c/file-27d3f512-c4c4-4a51-8bdd-78e4e0976874_BF-Page3.mp4',
-]
-
-const scrollingVideosCol3 = [
-  'https://files.tryflowdrive.com/org-e2ca5fe0-6b56-4f6f-825c-f639e3b7651c/file-f12b83e5-b62c-4b10-8f61-da7fb4a7564e_BF-10.mp4',
-  'https://files.tryflowdrive.com/org-e2ca5fe0-6b56-4f6f-825c-f639e3b7651c/file-76981083-b7eb-4eb1-92f8-418b5aab442f_BF-9.mp4',
-]
-
-const scrollingVideosCol4 = [
-  'https://files.tryflowdrive.com/org-e2ca5fe0-6b56-4f6f-825c-f639e3b7651c/file-6bef1263-7fa1-4828-b0ac-d9c8f9f450b9_BF-page-5.mp4',
-  'https://files.tryflowdrive.com/org-e2ca5fe0-6b56-4f6f-825c-f639e3b7651c/file-295e5fe9-0a45-480e-a07e-f5a68807481b_BF-page-6.mp4',
+  'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Man_posting_an_advertisement_for_La_publicit%C3%A9_en_France_par_Emile_Mermet.jpg/960px-Man_posting_an_advertisement_for_La_publicit%C3%A9_en_France_par_Emile_Mermet.jpg',
+  'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/N.Y._City_and_vicinity._%28Posters_advertising_theaters%2C_businesses_on_unidentified_wall.%29_%28NYPL_b11708034-1530700%29.tiff/lossy-page1-960px-N.Y._City_and_vicinity._%28Posters_advertising_theaters%2C_businesses_on_unidentified_wall.%29_%28NYPL_b11708034-1530700%29.tiff.jpg',
+  'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/La_publicit%C3%A9_en_France_par_Emile_Mermet%2C_advertising_poster%2C_ca._1880.jpg/960px-La_publicit%C3%A9_en_France_par_Emile_Mermet%2C_advertising_poster%2C_ca._1880.jpg',
+  'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Louisa_Coffee_and_Sanmin_Road_bus_stop_%2851017503698%29.jpg/960px-Louisa_Coffee_and_Sanmin_Road_bus_stop_%2851017503698%29.jpg',
+  'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Toyokawa_Community_Bus_Meiden_Akasaka_Station_Bus_Stop_%282015-10-03%29.JPG/960px-Toyokawa_Community_Bus_Meiden_Akasaka_Station_Bus_Stop_%282015-10-03%29.JPG',
 ]
 
 const tierImages = [
-  assets.brandFans.crystal,
-  assets.brandFans.lyayb,
-  assets.brandFans._13,
-  assets.brandFans.nvme,
+  'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Wikipedia_Times_Square_Billboard_15.jpg/960px-Wikipedia_Times_Square_Billboard_15.jpg',
+  'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/86th_Street_Second_Av._Subway_Station_Unveiled_%2831863534822%29.jpg/960px-86th_Street_Second_Av._Subway_Station_Unveiled_%2831863534822%29.jpg',
+  'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Berlin_Mitte_Litfa%C3%9F-Platz.JPG/960px-Berlin_Mitte_Litfa%C3%9F-Platz.JPG',
+  'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Toopranpet_bus_shelter_-_Mapillary_%281276860037147020%29.jpg/960px-Toopranpet_bus_shelter_-_Mapillary_%281276860037147020%29.jpg',
 ]
 
 const tiers = [
@@ -57,7 +38,7 @@ const tiers = [
   { label: 'HIGHWAYS', range: 'TRAFFIC CORRIDORS' },
 ]
 
-const placeholderImg = `${CDN}/672e2799473b9e1f1dc0eb5c/675ab604e263f78becfa1e2c_placeholder.jpg`
+const placeholderImg = 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Wikipedia_Times_Square_Billboard_13.jpg/960px-Wikipedia_Times_Square_Billboard_13.jpg'
 const cardTopImg = `${CDN}/672e2799473b9e1f1dc0eb5c/672e2799473b9e1f1dc0ef12_Group%201115.webp`
 
 function AnimatedCounter({ target, suffix = '', isVisible }) {
@@ -75,6 +56,68 @@ function AnimatedCounter({ target, suffix = '', isVisible }) {
     return () => clearInterval(timer)
   }, [isVisible, target])
   return <span>{count}{suffix}</span>
+}
+
+function PopStage({ images, tall = false }) {
+  const stageRef = useRef(null)
+
+  useEffect(() => {
+    const container = stageRef.current
+    if (!container) return
+
+    const imgs = Array.from(container.querySelectorAll('.starburst-image'))
+    const timeouts = new Set()
+    const activeSlots = new Set()
+
+    const popRandom = () => {
+      const cols = window.innerWidth < 768 ? 2 : 4
+      const rows = window.innerWidth < 768 ? 1 : (tall ? 2 : 1)
+      const freeImgs = imgs.filter(el => !el.dataset.active)
+      const freeSlots = [...Array(cols * rows).keys()].filter(s => !activeSlots.has(s))
+      if (!freeImgs.length || !freeSlots.length) return
+
+      const img = freeImgs[Math.floor(Math.random() * freeImgs.length)]
+      const slot = freeSlots[Math.floor(Math.random() * freeSlots.length)]
+      activeSlots.add(slot)
+      img.dataset.active = '1'
+
+      const col = slot % cols
+      const row = Math.floor(slot / cols)
+      const cellW = 100 / cols
+      const cellH = 100 / rows
+      img.style.left = (col * cellW + cellW / 2 + (Math.random() * 10 - 5)) + '%'
+      img.style.top = (row * cellH + cellH / 2 + (Math.random() * 10 - 5)) + '%'
+
+      img.classList.remove('pop-in', 'pop-out')
+      void img.offsetWidth
+      img.classList.add('pop-in')
+
+      timeouts.add(setTimeout(() => {
+        img.classList.remove('pop-in')
+        img.classList.add('pop-out')
+        timeouts.add(setTimeout(() => {
+          delete img.dataset.active
+          activeSlots.delete(slot)
+        }, 750))
+      }, 2400 + Math.random() * 1800))
+    }
+
+    for (let i = 0; i < 4; i++) timeouts.add(setTimeout(popRandom, i * 350))
+    const intervalId = setInterval(popRandom, 1200)
+
+    return () => {
+      clearInterval(intervalId)
+      timeouts.forEach(clearTimeout)
+    }
+  }, [tall])
+
+  return (
+    <div className={`starburst-pop-stage ${tall ? 'is-tall' : 'is-short'}`} ref={stageRef}>
+      {images.map((src, i) => (
+        <img key={i} src={src} loading="lazy" alt="" className={`starburst-image _${i + 1}`} />
+      ))}
+    </div>
+  )
 }
 
 const arrowSvg = (
@@ -121,11 +164,6 @@ function ScrollingColumn({ videos, direction = 'up', className = '' }) {
             <ScrollingCard key={i} videoSrc={src} />
           ))}
         </div>
-        <div className={`card-scrolling absolute ${direction === 'down' ? 'down' : ''}`}>
-          {videos.map((src, i) => (
-            <ScrollingCard key={i} videoSrc={src} />
-          ))}
-        </div>
       </div>
     </div>
   )
@@ -134,8 +172,8 @@ function ScrollingColumn({ videos, direction = 'up', className = '' }) {
 function BrandFans() {
   const [statsVisible, setStatsVisible] = useState(false)
   const statsRef = useRef(null)
-  const starburstRef = useRef(null)
-  const starburstImgRefs = useRef([])
+  const svgDrawRef = useRef(null)
+  const weareHeadingRef = useRef(null)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -147,33 +185,23 @@ function BrandFans() {
   }, [])
 
   useEffect(() => {
-    const section = starburstRef.current
-    if (!section) return
-
-    const handleScroll = () => {
-      const rect = section.getBoundingClientRect()
-      const windowHeight = window.innerHeight
-      const sectionHeight = rect.height
-
-      const startTrigger = windowHeight * 0.8
-      const endTrigger = -sectionHeight * 0.2
-      const rawProgress = (startTrigger - rect.top) / (startTrigger - endTrigger)
-      const progress = Math.max(0, Math.min(1, rawProgress))
-
-      starburstImgRefs.current.forEach((img, i) => {
-        if (!img) return
-        const stagger = i * 0.1
-        const imgProgress = Math.max(0, Math.min(1, (progress - stagger) / (1 - stagger * 0.6)))
-        const opacity = imgProgress
-        const scale = 0.7 + 0.3 * imgProgress
-        img.style.opacity = opacity
-        img.style.transform = `scale(${scale})`
-      })
-    }
-
-    window.addEventListener('scroll', handleScroll, { passive: true })
-    handleScroll()
-    return () => window.removeEventListener('scroll', handleScroll)
+    if (!svgDrawRef.current) return
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate')
+            if (weareHeadingRef.current) {
+              weareHeadingRef.current.classList.add('animate')
+            }
+            observer.disconnect()
+          }
+        })
+      },
+      { threshold: 0.2 }
+    )
+    observer.observe(svgDrawRef.current)
+    return () => observer.disconnect()
   }, [])
 
   return (
@@ -183,16 +211,28 @@ function BrandFans() {
         <div className="padding-global">
           <div className="container-large">
             <div className="padding-section-small">
-              <div className="standardhero_component">
-                <p className="text-size-huge">
-                  Geo-targeting is at the core of Doohpie. Instead of selecting advertising inventory purely by format, advertisers start with a location and identify opportunities around it - building campaigns around cities, states, neighborhoods, business districts, highways and high-footfall zones.
-                </p>
-                <div className="standardhero_header">
-                  <h1 className="heading-style-h2 text-weight-normal is-service">WHAT IS GEO-TARGETING ANYWAY?</h1>
-                  <p className="text-size-large">
-                    This isn't buying billboards as you know it.<br />
-                    Target City → Select Area → Identify Locations → Choose Inventory → Upload Creative → Launch Campaign. It's outdoor advertising built around where your audience actually is.
+              <div className="standardhero_component gf-hero">
+                <div className="gf-hero-intro">
+                  <span className="gf-hero-eyebrow">GEO-TARGETING AT THE CORE</span>
+                  <p className="gf-hero-lede">
+                    Geo-targeting is at the core of Doohpie. Instead of selecting advertising
+                    inventory purely by format, advertisers <em>start with a location</em> and
+                    identify opportunities around it - building campaigns around cities, states,
+                    neighborhoods, business districts, highways and high-footfall zones.
                   </p>
+                </div>
+                <div className="standardhero_header gf-hero-main">
+                  <h1 className="gf-hero-title">WHAT IS<br />GEO-TARGETING<br /><span>ANYWAY?</span></h1>
+                  <p className="gf-hero-kicker">This isn't buying billboards as you know it.</p>
+                  <ol className="gf-steps">
+                    {['Target City', 'Select Area', 'Identify Locations', 'Choose Inventory', 'Upload Creative', 'Launch Campaign'].map((step, i) => (
+                      <li key={i} className="gf-step">
+                        <span className="gf-step-num">{String(i + 1).padStart(2, '0')}</span>
+                        {step}
+                      </li>
+                    ))}
+                  </ol>
+                  <p className="gf-hero-note">It's outdoor advertising built around where your audience actually is.</p>
                 </div>
               </div>
             </div>
@@ -205,23 +245,55 @@ function BrandFans() {
         <div className="padding-global">
           <div className="container-large">
             <div className="padding-section-small">
-              <div className="starbust-images_layout" ref={starburstRef}>
-                <div className="padding-xhuge"></div>
+              <div className="starbust-images_layout">
                 <h2 className="cs2-h1 _2">START WITH A LOCATION. NOT A SPACE.</h2>
-                <div className="max-width-medium"></div>
-                {starburstImages.map((src, i) => (
-                  <img
-                    key={i}
-                    ref={el => starburstImgRefs.current[i] = el}
-                    src={src}
-                    loading="lazy"
-                    alt=""
-                    className={`starburst-image _${i + 1}`}
-                    style={{ opacity: 0, transform: 'scale(0.7)' }}
-                  />
-                ))}
-                <div className="padding-xxhuge is-mobile-landscape"></div>
-                <div className="padding-xhuge is-mobile-only"></div>
+                <PopStage images={starburstImages} tall />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* We Are Section */}
+      <section className="section_weare">
+        <div className="padding-global">
+          <div className="container-large">
+            <div className="padding-section-small">
+              <PopStage images={starburstImages} />
+              <div className="weare_component">
+                <div className="weare_svg-wrapper" ref={svgDrawRef}>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="-250 130 1500 870" width="950" height="850">
+                    {/* Stylish Cursive Script "D" */}
+                    <text x="-220" y="950"
+                          fontFamily="'Pinyon Script', 'Great Vibes', cursive"
+                          fontSize="1100"
+                          fill="none"
+                          stroke="#4cda56"
+                          strokeWidth="5"
+                          strokeLinejoin="round"
+                          className="svg-draw-text">D</text>
+
+                    {/* Circular Monogram Badge */}
+                    <g transform="translate(850,400)">
+                      <circle r="90" fill="none" stroke="#4cda56" strokeWidth="4" className="svg-draw-circle"/>
+                      <circle r="78" fill="none" stroke="#4cda56" strokeWidth="2" className="svg-draw-circle"/>
+                      <text x="0" y="28"
+                            textAnchor="middle"
+                            fontFamily="Liberation Serif, Georgia, serif"
+                            fontWeight="bold"
+                            fontSize="90"
+                            fill="none"
+                            stroke="#4cda56"
+                            strokeWidth="3"
+                            className="svg-draw-text-m">π</text>
+                    </g>
+                  </svg>
+                </div>
+                <h2 data-animate className="weare_heading is-visible" ref={weareHeadingRef}>
+                  <span className="typing-text typing-line-1">WE ARE THE</span><br />
+                  <span className="typing-text typing-line-2">GEO-TARGETING</span><br />
+                  <span className="typing-text typing-line-3">OOH PLATFORM</span>
+                </h2>
               </div>
             </div>
           </div>
@@ -233,16 +305,6 @@ function BrandFans() {
         <div className="padding-global">
           <div className="container-large">
             <div className="padding-section-small">
-              <div className="brand-fan-scrolling-cards">
-                <div className="scrolling-cards-gradient-overlay"></div>
-                {/* Desktop columns */}
-                <ScrollingColumn videos={scrollingVideosCol1} direction="up" className="hide-mobile-landscape" />
-                <ScrollingColumn videos={scrollingVideosCol2} direction="down" className="hide-mobile-landscape" />
-                {/* Mobile columns */}
-                <ScrollingColumn videos={scrollingVideosCol3} direction="up" className="show-mobile-only" />
-                <ScrollingColumn videos={scrollingVideosCol4} direction="down" className="show-mobile-only" />
-              </div>
-
               {/* Creator Tier Cards */}
               <div className="creator-tier">
                 {tiers.map((tier, i) => (
@@ -255,9 +317,6 @@ function BrandFans() {
                         </div>
                       </div>
                       <img src={tierImages[i]} loading="lazy" alt="" className="image-rounded is-square" />
-                      <div className="margin-top margin-small">
-                        <img src={assets.circleHeart} loading="lazy" alt="" className="hearts-images" />
-                      </div>
                     </div>
                   </div>
                 ))}
@@ -266,64 +325,12 @@ function BrandFans() {
               {/* Brand Fans Grid */}
               <div className="brandfans-grid-wrap">
                 <div className="margin-right margin-xlarge">
-                  <div className="margin-bottom margin-medium">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="-250 0 1200 728" width="100%" height="auto">
-                      {/* Stylish Cursive Script "D" */}
-                      <text x="-220" y="640"
-                            fontFamily="'Pinyon Script', 'Great Vibes', cursive"
-                            fontSize="620"
-                            fill="none"
-                            stroke="#4cda56"
-                            strokeWidth="3"
-                            strokeLinejoin="round"
-                            className="svg-draw-text">D</text>
-
-                      {/* Circular "M" Monogram Badge */}
-                      <g transform="translate(600,240)">
-                        <circle r="115" fill="none" stroke="#4cda56" strokeWidth="4"/>
-                        <circle r="100" fill="none" stroke="#4cda56" strokeWidth="2"/>
-                        <text x="0" y="38"
-                              textAnchor="middle"
-                              fontFamily="Liberation Serif, Georgia, serif"
-                              fontWeight="bold"
-                              fontSize="120"
-                              fill="none"
-                              stroke="#4cda56"
-                              strokeWidth="3">M</text>
-                      </g>
-                    </svg>
-                  </div>
                   <h2 className="text-color-pink followers">Radius-Based Targeting</h2>
                 </div>
                 <div className="brandfans-grid_image-side">
                   {cultureImages.map((src, i) => (
                     <img key={i} src={src} loading="lazy" alt="" className={`culture-image${i === 0 ? '' : i <= 2 ? i : i === 3 ? '-3' : '-5'}`} />
                   ))}
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="-250 0 1200 728" width="100%" height="auto" className="b-wide remove-margin">
-                    {/* Stylish Cursive Script "D" */}
-                    <text x="-220" y="640"
-                          fontFamily="'Pinyon Script', 'Great Vibes', cursive"
-                          fontSize="620"
-                          fill="none"
-                          stroke="#4cda56"
-                          strokeWidth="3"
-                          strokeLinejoin="round"
-                          className="svg-draw-text">D</text>
-
-                    {/* Circular "M" Monogram Badge */}
-                    <g transform="translate(600,240)">
-                      <circle r="115" fill="none" stroke="#4cda56" strokeWidth="4"/>
-                      <circle r="100" fill="none" stroke="#4cda56" strokeWidth="2"/>
-                      <text x="0" y="38"
-                            textAnchor="middle"
-                            fontFamily="Liberation Serif, Georgia, serif"
-                            fontWeight="bold"
-                            fontSize="120"
-                            fill="none"
-                            stroke="#4cda56"
-                            strokeWidth="3">M</text>
-                    </g>
-                  </svg>
                 </div>
               </div>
             </div>

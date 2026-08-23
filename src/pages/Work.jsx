@@ -6,7 +6,7 @@ const featuredCaseStudy = {
   brand: 'STORE LAUNCH',
   title: 'Delhi Radius Campaign',
   description: "Instead of advertising across an entire city, a retail brand launching a new store in Delhi focused its campaign on a target radius around the store location - combining static billboards and digital LED screens within walking and driving distance of the new doors.",
-  images: assets.work.gap,
+  images: assets.work.campaignLocations,
 }
 
 const awards = [
@@ -21,31 +21,31 @@ const awards = [
 const caseStudies = [
   {
     brand: 'FMCG BRAND',
-    title: 'Highway Awareness Takeover',
-    description: 'A static billboard campaign along major traffic corridors that kept the brand visible to daily commuters for the full campaign period.',
-    image: assets.work.mugler[0],
-    awards: ['Static Billboards', 'Brand Awareness'],
+    title: 'Highway Hoarding Takeover',
+    description: 'Large-format roadside hoardings along major traffic corridors kept the brand impossible to miss for daily commuters.',
+    image: assets.work.hoardingHighway,
+    awards: ['Roadside Hoardings', 'Brand Awareness'],
   },
   {
     brand: 'QSR CHAIN',
-    title: 'Dayparted Digital LED Campaign',
-    description: 'Morning coffee creatives, afternoon retail offers and evening entertainment spots - all rotated on the same digital LED network.',
-    image: assets.work.estee,
-    awards: ['Digital LED Boards', 'Dayparting'],
+    title: 'Dayparted Gantry Banner Campaign',
+    description: 'Morning coffee creatives, afternoon retail offers and evening entertainment spots - all rotated across overhead gantry banners on one network.',
+    image: assets.work.gantryBanners,
+    awards: ['Gantry Banners', 'Dayparting'],
   },
   {
     brand: 'FASHION RETAILER',
-    title: 'Transit Hub Backlit Network',
-    description: 'Backlit displays across transport hubs and shopping areas delivered day-and-night visibility through a new store launch window.',
-    image: assets.work.primark,
-    awards: ['Backlit Displays', 'Retail Promotion'],
+    title: 'Street Pole Banner Network',
+    description: 'Pole banners lining transport hubs and shopping streets delivered around-the-clock visibility through a new store launch window.',
+    image: assets.work.poleBanners,
+    awards: ['Street Pole Banners', 'Retail Promotion'],
   },
   {
     brand: 'REAL ESTATE DEVELOPER',
     title: 'Construction Site Domination',
-    description: 'Construction covers transformed hoardings around a flagship development into large-scale brand experiences in a busy urban district.',
-    image: assets.work.nike,
-    awards: ['Construction Covers', 'Urban Branding'],
+    description: 'Site hoardings transformed the perimeter of a flagship development into a large-scale brand canvas in a busy urban district.',
+    image: assets.work.siteHoarding,
+    awards: ['Site Hoardings', 'Urban Branding'],
   },
 ]
 

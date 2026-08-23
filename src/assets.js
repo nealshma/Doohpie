@@ -96,6 +96,16 @@ export const assets = {
     mainThumbnail: `${CDN}/672e2799473b9e1f1dc0eb5c/680ff3759a3cfb38b60da326_main-thumbnail.jpg`,
     thumbnail2: `${CDN}/672e2799473b9e1f1dc0eb5c/6810ac66376c895b2d3fe9b7_thumbnail.jpg`,
     tyrabooker: `${CDN}/672e2799473b9e1f1dc0eb5c/675d86764314f55d5eb46747_tyrabookerr_1704824812_3276630473115120516_17226946.jpg`,
+    hoardingHighway: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Billboard%2C_Airline_Highway%2C_Metairie%2C_Louisiana%2C_October_2021_-_01.jpg/960px-Billboard%2C_Airline_Highway%2C_Metairie%2C_Louisiana%2C_October_2021_-_01.jpg',
+    gantryBanners: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Air_Bags_Alone_Won%27t_Get_You_Home_-_Buckle_Up_Highway_Safety_Digital_Billboard_%2825055254225%29.jpg/960px-Air_Bags_Alone_Won%27t_Get_You_Home_-_Buckle_Up_Highway_Safety_Digital_Billboard_%2825055254225%29.jpg',
+    poleBanners: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Lamppost_banners_and_Freetown_Way_-_geograph.org.uk_-_1289671.jpg/960px-Lamppost_banners_and_Freetown_Way_-_geograph.org.uk_-_1289671.jpg',
+    siteHoarding: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Advertising_hoardings_promoting_the_O2_Arena_-_geograph.org.uk_-_665930.jpg/960px-Advertising_hoardings_promoting_the_O2_Arena_-_geograph.org.uk_-_665930.jpg',
+    campaignLocations: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Wikipedia_Times_Square_Billboard_10.jpg/960px-Wikipedia_Times_Square_Billboard_10.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Dotonbori%2C_Osaka%2C_at_night%2C_November_2016.jpg/960px-Dotonbori%2C_Osaka%2C_at_night%2C_November_2016.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/View_of_Eastern_Section_of_Broadway_and_43rd_Street_at_Night%2C_2025.jpg/960px-View_of_Eastern_Section_of_Broadway_and_43rd_Street_at_Night%2C_2025.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/City_Hall_Adelaide_Street_Stop_18_Adelaide_St_Brisbane_P1450422.jpg/960px-City_Hall_Adelaide_Street_Stop_18_Adelaide_St_Brisbane_P1450422.jpg',
+    ],
   },
 
   carousel: [
@@ -215,10 +225,10 @@ export const assets = {
   },
 
   services: {
-    homepage: `${CDN}/672e2799473b9e1f1dc0eb5c/675c12df232e9da6b1ce4cbd_Homepage%20image.png`,
-    copyImage: `${CDN}/672e2799473b9e1f1dc0eb5c/675c14401304c57eafff215e_copy%20image.jpg`,
-    allison: `${CDN}/672e2799473b9e1f1dc0eb5c/675c15c883e82414f942113d_allisonvalentinofixed.jpeg`,
-    archivedVanity: `${CDN}/672e2799473b9e1f1dc0eb5c/672e2799473b9e1f1dc0eebd_8%20%40archivedvanity.jpg`,
+    homepage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/View_East_on_44th_Street_at_Night%2C_2025.jpg/960px-View_East_on_44th_Street_at_Night%2C_2025.jpg',
+    copyImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Illuminations_of_billboards_behind_glass_and_other_street_advertisement_in_the_bus_shelter_-_in_the_evening_with_many_reflections_and_transparency%3B_free_photo_Amsterdam_city%2C_Fons_Heijnsbroek.tif/lossy-page1-960px-thumbnail.tif.jpg',
+    allison: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/New_Billboard_on_Wightman_Road_London_N4_-_geograph.org.uk_-_7770384.jpg/960px-New_Billboard_on_Wightman_Road_London_N4_-_geograph.org.uk_-_7770384.jpg',
+    archivedVanity: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Advertising_hoarding%2C_Worcester_-_geograph.org.uk_-_6252854.jpg/960px-Advertising_hoarding%2C_Worcester_-_geograph.org.uk_-_6252854.jpg',
     gapPoster: `${CDN}/6602812e83ba824f8194d1a6/66439264807315025e2e2c22_9`,
   },
 
@@ -243,13 +253,13 @@ export const assets = {
   },
 
   blog: {
-    featured: `${CDN}/672e2799473b9e1f1dc0eb60/676063093eae32f1507f4cd5_FORBES%20IMAGE%201.png`,
-    post1: `${CDN}/672e2799473b9e1f1dc0eb60/672e2799473b9e1f1dc0ebe5_65f9b20f0f549cc5846cb8db_buttermilkagency_324713033_194004423220723_3018321606051922645_n.webp`,
-    post2: `${CDN}/672e2799473b9e1f1dc0eb60/672e2799473b9e1f1dc0ebff_65f9b20f0f549cc5846cb8b3_Copy%2520of%252005262D13-3322-494C-93B8-434C904F7BC3.webp`,
-    post3: `${CDN}/672e2799473b9e1f1dc0eb60/672e2799473b9e1f1dc0ec22_65f9b20f0f549cc5846cb8f5_Screenshot%25202023-07-28%2520at%252000.13.34.webp`,
-    post4: `${CDN}/672e2799473b9e1f1dc0eb60/672e2799473b9e1f1dc0edec_65f9b20f0f549cc5846cb8c7_Screenshot%25202023-07-28%2520at%252000.16.09.webp`,
-    post5: `${CDN}/672e2799473b9e1f1dc0eb60/672e2799473b9e1f1dc0eded_65f9b20f0f549cc5846cb883_Screenshot%25202023-07-28%2520at%252000.03.05.webp`,
-    post6: `${CDN}/672e2799473b9e1f1dc0eb60/672e2799473b9e1f1dc0edee_65f9b20f0f549cc5846cb7aa_Feed%2520Post%25204.webp`,
+    featured: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Wikipedia_Times_Square_Billboard_12.jpg/960px-Wikipedia_Times_Square_Billboard_12.jpg',
+    post1: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Sapporo_Nanboku_platform.jpg/960px-Sapporo_Nanboku_platform.jpg',
+    post2: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Enjoy_Spritz_advert_on_a_Cardiff_Road_bus_shelter%2C_Newport_-_geograph.org.uk_-_5061336.jpg/960px-Enjoy_Spritz_advert_on_a_Cardiff_Road_bus_shelter%2C_Newport_-_geograph.org.uk_-_5061336.jpg',
+    post3: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Digital_bus_shelter%2C_Princes_Street_-_geograph.org.uk_-_4615265.jpg/960px-Digital_bus_shelter%2C_Princes_Street_-_geograph.org.uk_-_4615265.jpg',
+    post4: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Advertising_hoarding_at_Malvern_Rise_-_geograph.org.uk_-_7003223.jpg/960px-Advertising_hoarding_at_Malvern_Rise_-_geograph.org.uk_-_7003223.jpg',
+    post5: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Advertising_Column_in_Berlin_on_2026-05-21.jpg/960px-Advertising_Column_in_Berlin_on_2026-05-21.jpg',
+    post6: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/View_West_on_44th_Street_at_Night%2C_2025.jpg/960px-View_West_on_44th_Street_at_Night%2C_2025.jpg',
     microTrends: `${CDN}/672e2799473b9e1f1dc0eb60/67573702d3064785f0bfb19a_micro-trends-vogue-business-story.webp`,
   },
 

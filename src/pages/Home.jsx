@@ -353,7 +353,7 @@ function Home() {
                       Target a city, select an area, identify locations, choose your spaces, upload creative and launch. That's outdoor advertising, reimagined around where your audience actually is.
                     </p>
                   </div>
-                  <Link data-animate to="/services" className="text-style-link">
+                  <Link data-animate to="/ad-formats" className="text-style-link">
                     EXPLORE AD FORMATS →
                   </Link>
                 </div>
@@ -370,7 +370,7 @@ function Home() {
                   <div className="homeservice_wrapper">
                     <div data-animate-stagger className="homeservice_top">
                       {services.map((service) => (
-                        <Link to="/services" className="button-text is-icon is-service is-not-rollover" key={service.id}>
+                        <Link to="/ad-formats" className="button-text is-icon is-service is-not-rollover" key={service.id}>
                           <div>{service.title}</div>
                           <div className="icon-wrapper align-number">
                             <div className="icon-circle">
