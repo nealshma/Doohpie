@@ -90,31 +90,55 @@ function About() {
         <div className="padding-global">
           <div className="container-large">
             <div className="padding-section-small">
-              <div className="standardhero_component" data-animate>
-                <p className="text-size-medium about-hero-text">
-                  Doohpie is the location-powered advertising platform built for how brands grow now.
-                </p>
-                <h1 className="heading-style-h2 text-weight-normal hide">WHAT WE BELIEVE</h1>
-                <div className="standardhero_header">
-                  <div className="margin-bottom margin-large">
-                    <p className="text-size-large hide">
-                      So you've seen the platform, the formats we offer and the campaigns we deliver. Now you want to know what makes us different? Why geo-targeted outdoor advertising, and why now?
-                      <br /><br />
-                      We believe outdoor advertising should start with a location, not a space. Instead of asking "which billboard should we buy?", advertisers should ask "where do we want to reach our audience?". That shift makes outdoor advertising strategic — planned around locations, markets, customer zones and business objectives.
-                      <br /><br />
-                      With geo-targeting at the core, Doohpie helps brands move beyond simply buying advertising space and instead build campaigns around cities, neighborhoods and high-traffic zones where their message matters most.
+              <span className="gf-hero-eyebrow about-eyebrow">ABOUT DOOHPIE</span>
+              <div className="about-hero-grid" data-animate>
+                <div className="about-hero-copy">
+                  <div className="about-hero-intro">
+                    <h1 className="about-hero-title">
+                      WE BELIEVE IN<br /><span>LOCATION FIRST</span>
+                    </h1>
+                    <p className="about-hero-lede">
+                      Doohpie is the location-powered advertising platform built for how brands grow now.
                     </p>
                   </div>
+                  <div className="about-beliefs">
+                    <div className="about-belief">
+                      <span className="about-belief-num">01</span>
+                      <p>
+                        So you've seen the platform, the formats we offer and the campaigns we
+                        deliver. Now you want to know what makes us different? Why geo-targeted
+                        outdoor advertising, and why now?
+                      </p>
+                    </div>
+                    <div className="about-belief">
+                      <span className="about-belief-num">02</span>
+                      <p>
+                        We believe outdoor advertising should start with a location, not a space.
+                        Instead of asking "which billboard should we buy?", advertisers should ask
+                        "where do we want to reach our audience?". That shift makes outdoor
+                        advertising strategic - planned around locations, markets, customer zones
+                        and business objectives.
+                      </p>
+                    </div>
+                    <div className="about-belief">
+                      <span className="about-belief-num">03</span>
+                      <p>
+                        With geo-targeting at the core, Doohpie helps brands move beyond simply
+                        buying advertising space and instead build campaigns around cities,
+                        neighborhoods and high-traffic zones where their message matters most.
+                      </p>
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div className="baloon_component">
-                <div className="inflating-logo">
-                  <img 
-                    src="https://cdn.pixelkart.ai/uploads/2026/august/18/creative_35391abd.png" 
-                    alt="Doohpie" 
-                    className="doohpie-inflate-img" 
-                    ref={doohpieTextRef}
-                  />
+                <div className="baloon_component about-hero-balloon">
+                  <div className="inflating-logo">
+                    <img
+                      src="https://cdn.pixelkart.ai/uploads/2026/august/18/creative_35391abd.png"
+                      alt="Doohpie"
+                      className="doohpie-inflate-img"
+                      ref={doohpieTextRef}
+                    />
+                  </div>
                 </div>
               </div>
             </div>
@@ -130,13 +154,12 @@ function About() {
               <div className="padding-small"></div>
               <div className="margin-bottom margin-xlarge">
                 <p className="snapshot-heading">
-                  Advertisers need visibility in the short term, brand dominance in the long term, and measurable impact always - because a location only matters if it reaches your audience.
+                  Advertisers need visibility in the short term, brand dominance in the long term,
+                  and <span className="about-statement-accent">measurable impact always</span> -
+                  because a location only matters if it reaches your audience.
                 </p>
               </div>
               <div className="snapshot_component" data-animate ref={snapshotRef}>
-                <h2 className="snapshot-heading hide-tablet">
-                  PLATFORM<br />SNAPSHOT
-                </h2>
                 <div className="snapshot-wrapper">
                   <div className="snapshop-block">
                     <div className="snapshot-header-text">Ad Formats</div>
@@ -208,27 +231,17 @@ function About() {
           <div className="container-large">
             <div className="padding-section-small">
               <div className="team-section">
+                <div className="about-team-head">
+                  <span className="gf-hero-eyebrow">WHO IT'S FOR</span>
+                  <h2 className="lookat_heading">BUILT FOR MODERN ADVERTISERS</h2>
+                </div>
                 <div className="team_grid">
-                  <div className="margin-bottom margin-large">
-                    <h2 className="lookat_heading">BUILT FOR MODERN ADVERTISERS</h2>
-                  </div>
                   {audiences.map((audience, index) => (
                     <div key={index} className="team-block">
-                      <div className="team-pink-block">
-                        <div className="team-header">
-                          <div className="margin-bottom margin-xxsmall">
-                            <div className="team-heading">{audience.name}</div>
-                          </div>
-                          <p className="team-subtext">{audience.role}</p>
-                        </div>
-                        <div className="project_detail">
-                          <p className="text-para">{audience.bio}</p>
-                        </div>
-                      </div>
-                      <div className="team-detail">
-                        <div className="team-title">{audience.name}</div>
-                        <div className="text-color-grey job-title-text">{audience.role}</div>
-                      </div>
+                      <span className="about-card-num">{String(index + 1).padStart(2, '0')}</span>
+                      <div className="team-heading">{audience.name}</div>
+                      <div className="about-card-role">{audience.role}</div>
+                      <p className="about-card-bio">{audience.bio}</p>
                     </div>
                   ))}
                 </div>
