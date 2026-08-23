@@ -562,10 +562,13 @@ textarea {
 }
 
 .buttermilk-large-wide {
-  width: 100%;
+  width: 110vw;
+  max-width: none;
   height: auto;
   display: block;
   position: relative;
+  margin-left: calc(50% - 54vw);
+  image-rendering: -webkit-optimize-contrast;
 }
 
 /* Hero logo overlay */
@@ -577,6 +580,7 @@ textarea {
   width: 90%;
   max-width: 1400px;
   height: auto;
+  margin-left: 0;
   z-index: 2;
   pointer-events: none;
   filter: brightness(0) invert(1);

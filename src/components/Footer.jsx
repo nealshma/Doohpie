@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { assets } from '../assets'
+import doohpieLogo4x from '../assets/doohpie-logo-4x.png'
 
 function Footer() {
   const [email, setEmail] = useState('')
@@ -148,11 +149,19 @@ function Footer() {
 
             <div className="margin-bottom margin-large is-footer">
               <div className="margin-top margin-large">
+                <svg width="0" height="0" style={{ position: 'absolute' }} aria-hidden="true">
+                  <filter id="logo-sharpen" x="-5%" y="-5%" width="110%" height="110%">
+                    <feConvolveMatrix order="3" preserveAlpha="true" kernelMatrix="0 -1.4 0 -1.4 7.6 -1.4 0 -1.4 0" />
+                    <feComponentTransfer>
+                      <feFuncA type="gamma" exponent="1.15" amplitude="1.05" />
+                    </feComponentTransfer>
+                  </filter>
+                </svg>
                 <img
-                  src={assets.logo.white}
+                  src={doohpieLogo4x}
                   alt="Doohpie Logo"
                   className="buttermilk-large-wide"
-                  style={{ filter: 'brightness(0) invert(1)', opacity: 1 }}
+                  style={{ filter: 'url(#logo-sharpen) brightness(0) invert(1)', opacity: 1 }}
                 />
                 <div className="footer_padding">
                   <div className="margin-top margin-small">
