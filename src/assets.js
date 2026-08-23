@@ -1,19 +1,11 @@
-import clientLogo1 from './assets/client-logos/Client-Logos-1.svg'
-import clientLogo2 from './assets/client-logos/Client-Logos-2.svg'
-import clientLogo3 from './assets/client-logos/Client-Logos-3.svg'
-import clientLogo4 from './assets/client-logos/Client-Logos-4.svg'
-import clientLogo5 from './assets/client-logos/Client-Logos-5.svg'
-import clientLogo6 from './assets/client-logos/Client-Logos-6.svg'
-import clientLogo7 from './assets/client-logos/Client-Logos-7.svg'
-import clientLogo8 from './assets/client-logos/Client-Logos-8.svg'
-import clientLogo9 from './assets/client-logos/Client-Logos-9.svg'
-import clientLogo10 from './assets/client-logos/Client-Logos-10.svg'
-import clientLogo11 from './assets/client-logos/Client-Logos-11.svg'
-import clientLogo12 from './assets/client-logos/Client-Logos-12.svg'
-import clientLogo13 from './assets/client-logos/Client-Logos-13.svg'
-import clientLogo14 from './assets/client-logos/Client-Logos-14.svg'
-import clientLogo15 from './assets/client-logos/Client-Logos-15.svg'
-import clientLogo16 from './assets/client-logos/Client-Logos-16.svg'
+import clientLogo1 from './assets/client-logos/logo1.webp'
+import clientLogo2 from './assets/client-logos/logo2.webp'
+import clientLogo3 from './assets/client-logos/logo3.webp'
+import clientLogo4 from './assets/client-logos/logo4.webp'
+import clientLogo5 from './assets/client-logos/logo5.webp'
+import clientLogo6 from './assets/client-logos/logo6.webp'
+import clientLogo7 from './assets/client-logos/logo7.webp'
+import clientLogo8 from './assets/client-logos/logo8.webp'
 
 const CDN = 'https://cdn.prod.website-files.com'
 
@@ -77,14 +69,6 @@ export const assets = {
     clientLogo6,
     clientLogo7,
     clientLogo8,
-    clientLogo9,
-    clientLogo10,
-    clientLogo11,
-    clientLogo12,
-    clientLogo13,
-    clientLogo14,
-    clientLogo15,
-    clientLogo16,
   ],
 
   work: {
@@ -144,13 +128,13 @@ export const assets = {
       title: '#confesstoconceal',
       desc: 'Armani Beauty at top-of-mind and in-feed',
       image: 'https://images.unsplash.com/photo-1765398073978-94f84257baf7?w=800&q=80',
-      link: '#',
+      link: '/',
       projectLink: '/project/armani-beuaty-2025',
     },
     {
       name: 'Moschino',
       title: 'HOLIDAY SALES FOR MOSCHINO',
-      desc: 'Raising awareness of moschino teddy fragrances amongst us audiences',
+      desc: 'Raising awareness of Moschino Teddy fragrances across US cities',
       image: 'https://images.unsplash.com/photo-1676491394429-37341c0ef75a?w=800&q=80',
       link: '/case-studies/moschino',
       projectLink: '/project/moschino',
@@ -158,7 +142,7 @@ export const assets = {
     {
       name: 'Primark',
       title: 'The Joy of IRL Shopping',
-      desc: 'Primark asked Doohpie to curate a bespoke strategy to increase brand awareness, highlight the diverse offering, effectively engage new consumers across different states and encourage footfall to their newly opened stores.',
+      desc: 'A bespoke DOOH strategy driving footfall to new Primark stores nationwide',
       image: 'https://images.unsplash.com/photo-1647923822124-d8f3efb8adee?w=800&q=80',
       link: '/case-studies/primark',
       projectLink: '/project/primark',
@@ -166,7 +150,7 @@ export const assets = {
     {
       name: 'Mugler',
       title: 'EMPOWERING THE MUGLER MAFIA',
-      desc: 'To reinvigorate Mugler\'s brand identity, Doohpie aimed to galvanize a community of passionate creators with unique voices who epitomize the Mugler ethos, creating unique and compelling earned content.',
+      desc: 'Galvanizing passionate creators to reinvigorate Mugler\u2019s identity on iconic screens',
       image: 'https://images.unsplash.com/photo-1712757057495-016f69c8edbd?w=800&q=80',
       link: '/case-studies/mugler',
       projectLink: '/project/mugler',
@@ -174,7 +158,7 @@ export const assets = {
     {
       name: 'Prada',
       title: 'PRADA BEAUTY conquers the US',
-      desc: 'Prada Beauty came to Doohpie with the ask to launch the beauty brand in the United States, starting with their Lip Optimizing Balm and Monochrome Lipsticks, aiming to put them at the forefront of beauty conversations.',
+      desc: 'Launching Prada Beauty stateside with a dominant out-of-home presence',
       image: 'https://images.unsplash.com/photo-1777785113259-9cf46774ec56?w=800&q=80',
       link: '/case-studies/prada',
       projectLink: '/project/prada',
@@ -182,7 +166,7 @@ export const assets = {
     {
       name: 'Elizabeth Arden',
       title: 'the beginnings of #mybeautycape',
-      desc: 'In 2022, Elizabeth Arden tasked us with revitalising their legendary Eight Hour franchise to attract a wider and diverse audience.',
+      desc: 'Revitalising the legendary Eight Hour franchise for a wider, diverse audience',
       image: 'https://images.unsplash.com/photo-1699480114704-ac153307d2a0?w=800&q=80',
       link: '/case-studies/elizabeth-arden',
       projectLink: '/project/elizabeth-arden',
@@ -190,7 +174,7 @@ export const assets = {
     {
       name: 'Estée Lauder',
       title: 'Spread Holiday Cheer with Estée Lauder',
-      desc: 'Estée Lauder enlisted Doohpie to elevate their holiday campaign, aiming to position Estée Lauder as the ultimate holiday shopping partner and boost awareness of their seasonal offerings and promotions.',
+      desc: 'Positioning Estée Lauder as the ultimate holiday shopping partner',
       image: 'https://images.unsplash.com/photo-1762417582156-e172b6db6d86?w=800&q=80',
       link: '/case-studies/estee-lauder',
       projectLink: '/project/estee-lauder',
@@ -198,7 +182,7 @@ export const assets = {
     {
       name: 'Marc Jacobs',
       title: 'SERVING TWO ICONS',
-      desc: 'Marc Jacobs came to Doohpie in Q4 of 2023 wanting to reignite love for two of their most iconic handbags: The Tote and The Snapshot. The love was there, it was just latent.',
+      desc: 'Reigniting love for The Tote and The Snapshot across major US cities',
       image: 'https://images.unsplash.com/photo-1560196327-cca0a731441b?w=800&q=80',
       link: '/case-studies/marc-jacobs',
       projectLink: '/project/marc-jacobs',
@@ -206,7 +190,7 @@ export const assets = {
     {
       name: 'Gap',
       title: 'GAP\'S COMEBACK TO CULTURE',
-      desc: 'Gap was staging a comeback. The collaboration with Jungle X Tyla created an iconic cultural reset moment that skyrocketed Gap\'s SOV across social.',
+      desc: 'A cultural reset moment that skyrocketed Gap\u2019s share of voice',
       image: 'https://images.unsplash.com/photo-1636287304505-6b5acba3fd28?w=800&q=80',
       link: '/case-studies/gap',
       projectLink: '/project/gap',
@@ -214,7 +198,7 @@ export const assets = {
     {
       name: 'Armani Beauty',
       title: 'Build an authentic MULTI-TIERED community STARTING FROM THE BOTTOM',
-      desc: 'Drive brand AWARENESS amongst ARMANI\'S AUDIENCE WITH A PRIMARY FOCUS ON Gen Z',
+      desc: 'Driving Gen Z awareness through layered out-of-home formats',
       image: 'https://images.unsplash.com/photo-1445205170230-053b83016050?w=800&q=80',
       link: '/case-studies/armani-beauty',
       projectLink: '/project/armani',

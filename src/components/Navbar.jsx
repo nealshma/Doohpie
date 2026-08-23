@@ -17,11 +17,11 @@ function Navbar() {
 
   const navLinks = [
     { path: '/about', label: 'ABOUT' },
-    { path: '/services', label: 'SERVICES' },
+    { path: '/services', label: 'AD FORMATS' },
     { path: '/work', label: 'WORK' },
     { path: '/blog', label: 'BLOG' },
-    { path: '/brand-fans', label: 'BRAND FANS' },
-    { path: '/influencer-sign-up', label: 'CREATOR SIGN UP' },
+    { path: '/brand-fans', label: 'GEO TARGETING' },
+    { path: '/influencer-sign-up', label: 'GET STARTED' },
     { path: '/careers', label: 'CAREERS' },
     { path: '/contact', label: 'CONTACT' },
   ]

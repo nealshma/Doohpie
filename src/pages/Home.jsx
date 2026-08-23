@@ -2,12 +2,13 @@ import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import lottie from 'lottie-web'
 import { assets } from '../assets'
+import PresenceSection from '../components/PresenceSection'
 
 const services = [
-  { id: 1, title: 'BRAND FANS', description: 'Turn product sends into a scalable engine for content, conversation and advocacy.' },
-  { id: 2, title: 'CREATOR CAMPAIGNS', description: 'Full-service campaign execution from brief to final reporting.' },
-  { id: 3, title: 'CREATOR PROGRAMMES', description: 'Always-on ambassador programmes that build lasting brand affinity.' },
-  { id: 4, title: 'PAID AMPLIFICATION', description: 'Strategic paid media to amplify creator content at scale.' },
+  { id: 1, title: 'STATIC BILLBOARDS', description: 'Large-format, high-impact displays for continuous brand visibility in high-traffic locations.' },
+  { id: 2, title: 'DIGITAL LED BOARDS', description: 'Bright, high-resolution screens for video, animation and rotating multi-ad loops.' },
+  { id: 3, title: 'BACKLIT DISPLAYS', description: 'Internally illuminated units that keep your message visible day and night.' },
+  { id: 4, title: 'CONSTRUCTION COVERS', description: 'Large temporary surfaces that transform construction sites into brand experiences.' },
 ]
 
 function TimePill({ timezone, city }) {
@@ -132,6 +133,7 @@ function useReliableVideo(ref) {
 function Home() {
   const heroLogoRef = useRef(null)
   const svgDrawRef = useRef(null)
+  const weareHeadingRef = useRef(null)
   const desktopVideoRef = useRef(null)
   const mobileVideoRef = useRef(null)
 
@@ -155,11 +157,14 @@ function Home() {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add('animate')
+            if (weareHeadingRef.current) {
+              weareHeadingRef.current.classList.add('animate')
+            }
             observer.disconnect()
           }
         })
       },
-      { threshold: 0.3 }
+      { threshold: 0.2 }
     )
     observer.observe(svgDrawRef.current)
     return () => observer.disconnect()
@@ -236,13 +241,13 @@ function Home() {
             <div className="padding-section-small">
               <div className="buttermilk_component">
                 <div data-animate className="communities_eyebrow text-size-large text-style-allcaps hide-mobile-portrait">
-                  THE CREATOR COMPANY
+                  THE GEO-TARGETED OOH PLATFORM
                 </div>
                 <div data-animate className="communities_eyebrow text-size-large text-style-allcaps text-align-right">
-                  WHERE CULTURAL CREATIVITY MEETS COMMERCIAL AMBITION
+                  REACH THE RIGHT AUDIENCE. IN THE RIGHT PLACE.
                 </div>
                 <p data-animate className="text-size-large custom-homepage">
-                  Culture is built by creators. They generate advocacy, set the pace of relevance, and create the kind of creative capital brands can't buy elsewhere.
+                  Doohpie is a location-powered advertising platform that helps advertisers plan, target, manage and deliver out-of-home and digital out-of-home campaigns across high-impact physical and digital spaces. With geo-targeting at the core, you can build campaigns around specific cities, neighborhoods and high-traffic zones.
                 </p>
               </div>
             </div>
@@ -284,9 +289,10 @@ function Home() {
                     </g>
                   </svg>
                 </div>
-                <h2 data-animate className="weare_heading is-visible">
+                <h2 data-animate className="weare_heading is-visible" ref={weareHeadingRef}>
                   <span className="typing-text typing-line-1">WE ARE THE</span><br />
-                  <span className="typing-text typing-line-2">CREATOR COMPANY</span>
+                  <span className="typing-text typing-line-2">GEO-TARGETING</span><br />
+                  <span className="typing-text typing-line-3">OOH PLATFORM</span>
                 </h2>
               </div>
             </div>
@@ -318,7 +324,7 @@ function Home() {
                     </div>
                     <div className="homeservice_header">
                       <img src={assets.svgs.arrowRight} loading="lazy" alt="" className="homeservice_icon" />
-                      <div className="homeservice_text">@aishimatsu</div>
+                      <div className="homeservice_text">STATIC BILLBOARD — HIGHWAY</div>
                     </div>
                   </div>
                 </div>
@@ -331,7 +337,7 @@ function Home() {
                     </div>
                     <div className="homeservice_header">
                       <img src={assets.svgs.arrowRight} loading="lazy" alt="" className="homeservice_icon" />
-                      <div className="homeservice_text">@BELLHUE</div>
+                      <div className="homeservice_text">DIGITAL LED — CITY CENTRE</div>
                     </div>
                   </div>
                 </div>
@@ -339,16 +345,16 @@ function Home() {
                 {/* Content column */}
                 <div data-animate className="homeservice_item is-content">
                   <div className="margin-bottom margin-large custom-mobile">
-                    <h2 data-animate className="homeservice_heading">WHAT WE BUILD</h2>
+                    <h2 data-animate className="homeservice_heading">WHAT WE OFFER</h2>
                   </div>
                   <div data-animate className="margin-bottom margin-large custom-mobile">
                     <p className="text-size-small">
-                      Doohpie leverages contemporary culture and creator communities to fortify brands and boost business potential. It's a two way street that serves our creators as much as they serve you, building robust reputations and relationships that benefit everyone.<br /><br />
-                      Creator marketing is all we do. And we have to practice what we preach. Creators, community and culture - that's what our capabilities are centered around.
+                      Doohpie brings static billboards, digital LED boards, backlit displays and construction covers together into one unified platform. Instead of managing different formats independently, advertisers start with a location and discover the right inventory around it.<br /><br />
+                      Target a city, select an area, identify locations, choose your spaces, upload creative and launch. That's outdoor advertising, reimagined around where your audience actually is.
                     </p>
                   </div>
                   <Link data-animate to="/services" className="text-style-link">
-                    SEE OUR SERVICES →
+                    EXPLORE AD FORMATS →
                   </Link>
                 </div>
 
@@ -446,7 +452,7 @@ function Home() {
                         </div>
                         <div className="max-width-xsmall">
                           <p data-animate className="map_content-heading">
-                            We're a global agency, headquartered out of London, with offices in Miami and Dubai.
+                            From busy city roads and commercial hubs to highways, transit zones and construction sites — we help brands advertise where their audiences live, work, travel and shop.
                           </p>
                         </div>
                         <div className="margin-bottom margin-medium">
@@ -488,7 +494,7 @@ function Home() {
             <div className="padding-section-small global-creator">
               <div className="margin-bottom margin-large">
                 <div className="header-wrapper">
-                  <h2 className="carousel_heading">The Global Creator Company</h2>
+                  <h2 className="carousel_heading">One Platform. Multiple Advertising Formats.</h2>
                 </div>
               </div>
               <section className="section_projectcarousel">
@@ -506,7 +512,7 @@ function Home() {
                 </div>
               </section>
               <Link to="/work" className="text-size-regular text-style-underline">
-                VIEW ALL CASE STUDIES →
+                VIEW ALL CAMPAIGNS →
               </Link>
             </div>
           </div>
@@ -520,8 +526,8 @@ function Home() {
             <div className="padding-section-small get-buttered-up_mobile">
               <div className="cta_component">
                 <div className="businessmmilk-text">
-                  We help brands earn advocacy, not buy attention.<br />
-                  It's how they find growth beyond the obvious places.
+                  Turn locations into opportunities. Turn visibility into impact.<br />
+                  Turn outdoor advertising into a smarter media strategy.
                 </div>
                 <div className="cta_button">
                   <button className="new-button is-shorter is-full-width">
@@ -533,7 +539,7 @@ function Home() {
                     <Link to="/contact" className="new-button_link w-inline-block"></Link>
                   </button>
                 </div>
-                <div className="businessmilk-heading">LET'S MAKE SOMETHING</div>
+                <div className="businessmilk-heading">GEO-TARGET PLAN ADVERTISE</div>
               </div>
             </div>
           </div>
@@ -541,81 +547,7 @@ function Home() {
       </section>
 
       {/* Presence / Enter Doohpieverse Section */}
-      <section className="section_presence">
-        <div className="padding-global">
-          <div className="container-large">
-            <div className="padding-section-small clear-bottom-padding">
-              <div className="divider"></div>
-              <div className="butterverse_wrapper">
-                <div className="enter-the-butter">
-                  <div className="margin-top margin-medium">
-                    <div className="margin-bottom margin-huge butterverse_mobile">
-                      <div className="stack-left-wide">
-                        <img
-                          src={assets.svgs.enterButterverse}
-                          loading="lazy"
-                          alt="Enter The Doohpieverse"
-                          className="our-global hide-mobile-portrait"
-                        />
-                        <img
-                          src={assets.svgs.enterButterverseCenter}
-                          loading="lazy"
-                          alt="Enter The Doohpieverse"
-                          className="our-global show-mobile-portrait"
-                        />
-                        <div>
-                          <img src={assets.svgs.arrowRight} loading="lazy" alt="" className="enter-button-4rem" />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="butterverse-cta">
-                  <div className="margin-bottom margin-large">
-                    <div className="max-width-xsmall">
-                      <p data-animate className="text-size-large is-butterverse-caption">
-                        Jump over to our socials to discover our news, our views and our people.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="butterverse_social">
-                    <a href="https://www.instagram.com/doohpie" target="_blank" rel="noopener noreferrer" className="new-button is-shorter is-full-width">
-                      <div className="new-button_text is-full-width">Instagram</div>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 29 29" fill="none" className="new-button_icon">
-                        <path d="M14.5002 17.7738C16.2478 17.7738 17.6645 16.3572 17.6645 14.6096C17.6645 12.862 16.2478 11.4453 14.5002 11.4453C12.7526 11.4453 11.3359 12.862 11.3359 14.6096C11.3359 16.3572 12.7526 17.7738 14.5002 17.7738Z" fill="currentColor"></path>
-                        <path fillRule="evenodd" clipRule="evenodd" d="M18.5694 6.93555H10.4306C8.43979 6.93555 6.82617 8.54945 6.82617 10.54V18.6787C6.82617 20.6696 8.43979 22.2832 10.4306 22.2832H18.5694C20.5602 22.2832 22.1738 20.6696 22.1738 18.6787V10.54C22.1738 8.54945 20.5602 6.93555 18.5694 6.93555ZM14.5 19.4908C11.804 19.4908 9.61887 17.3054 9.61887 14.6094C9.61887 11.9134 11.804 9.72825 14.5 9.72825C17.196 9.72825 19.3814 11.9134 19.3814 14.6094C19.3814 17.3054 17.196 19.4908 14.5 19.4908ZM19.5439 10.6796C18.916 10.6796 18.4068 10.1707 18.4068 9.54246C18.4068 8.91421 18.916 8.40536 19.5439 8.40536C20.1719 8.40536 20.6813 8.91449 20.6813 9.54246C20.6813 10.1704 20.1719 10.6796 19.5439 10.6796Z" fill="currentColor"></path>
-                        <path fillRule="evenodd" clipRule="evenodd" d="M14.4999 0C6.51375 0 0 6.51375 0 14.4999C0 22.486 6.51375 29 14.4999 29C22.486 29 28.9997 22.4863 28.9997 14.4999C28.9997 6.51346 22.4863 0 14.4999 0ZM23.9061 18.5394C23.9061 21.5383 21.4754 23.9697 18.4762 23.9697H10.5235C7.52463 23.9697 5.09357 21.5383 5.09357 18.5394V10.5871C5.09357 7.58788 7.52463 5.15682 10.5235 5.15682H18.4762C21.4754 5.15682 23.9061 7.58788 23.9061 10.5871V18.5394Z" fill="currentColor"></path>
-                      </svg>
-                    </a>
-                    <a href="https://www.linkedin.com/company/doohpie" target="_blank" rel="noopener noreferrer" className="new-button is-shorter is-full-width">
-                      <div className="new-button_text is-full-width">Linkedin</div>
-                      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 46 46" width="100%" className="new-button_icon">
-                        <path d="M23,0C10.3,0,0,10.3,0,23s10.3,23,23,23c12.7,0,23-10.3,23-23S35.7,0,23,0z M16.5,34.5h-4.7V19.2h4.7V34.5z M16.9,14.3c0,0.4-0.1,0.7-0.2,1c-0.1,0.3-0.3,0.6-0.6,0.9c-0.3,0.2-0.6,0.4-0.9,0.6c-0.3,0.1-0.7,0.2-1,0.2h0 c-0.5,0-1.1-0.2-1.5-0.5c-0.4-0.3-0.8-0.7-1-1.2c-0.2-0.5-0.2-1.1-0.1-1.6c0.1-0.5,0.4-1,0.8-1.4c0.4-0.4,0.9-0.6,1.4-0.7 c0.5-0.1,1.1,0,1.6,0.2c0.5,0.2,0.9,0.6,1.2,1C16.8,13.2,16.9,13.7,16.9,14.3L16.9,14.3z M34.5,34.5h-4.7v-8.1 c0-2.5-1.4-3.5-2.7-3.5c-1.6,0-3.3,1.1-3.3,3.6v8h-4.7V19.2h4.4v2.2h0.1c0.4-0.9,2.4-2.5,5.1-2.5s5.8,1.8,5.8,6.5V34.5z" fill="currentColor"></path>
-                      </svg>
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <div className="butterverse-video_wrapper">
-                <div className="divider show-mobile-landscape"></div>
-                <div className="butterverse-video w-background-video w-background-video-atom">
-                  <video
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    style={{ backgroundImage: `url("${assets.ctaVideo.poster}")`, objectFit: 'cover', width: '100%', height: '100%' }}
-                  >
-                    <source src={assets.ctaVideo.mp4} />
-                    <source src={assets.ctaVideo.webm} />
-                  </video>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PresenceSection />
     </div>
   )
 }

@@ -1,8 +1,9 @@
 import { useState } from 'react'
 import { assets } from '../assets'
+import PresenceSection from '../components/PresenceSection'
 
-const followerRanges = ['1-10k', '10-25k', '25-100k', '100k+']
-const interests = ['COMEDY', 'FASHION', 'MUSIC', 'HAIR', 'TRAVEL', 'FOOD', 'GAMING', 'CARS', 'SPORTS', 'ENTERTAINMENT', 'BEAUTY', 'OTHER']
+const followerRanges = ['1-10', '10-50', '50-250', '250+']
+const interests = ['STATIC BILLBOARDS', 'DIGITAL LED BOARDS', 'BACKLIT DISPLAYS', 'CONSTRUCTION COVERS', 'TRANSIT', 'AIRPORTS', 'MALLS', 'HIGHWAYS', 'STREET FURNITURE', 'OTHER']
 
 const nextArrow = (
   <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 26 26" fill="none" className="new-button_icon">
@@ -21,7 +22,7 @@ const submitArrow = (
 function MilkBanner() {
   return (
     <section className="section_busines-milk">
-      <div className="milk-4-masses">MILK 4 the masses</div>
+      <div className="milk-4-masses">OOH 4 every brand</div>
     </section>
   )
 }
@@ -83,7 +84,7 @@ function Contact() {
             <div className="padding-section-small">
               <div className="standardhero_component is-contact">
                 <p className="text-size-huge">
-                  With teams across London, New York, Dubai and Rio, we combine global reach with local expertise to help brands build communities that matter.
+                  Tell us where your audience lives, works, travels and shops. We'll help you find the right outdoor inventory — from busy city roads and commercial hubs to highways, transit zones and illuminated digital screens.
                 </p>
               </div>
             </div>
@@ -98,7 +99,7 @@ function Contact() {
             <div className="padding-section-small">
               <div className="contact_component">
                 <div className="contact-tabs-wrap">
-                  {['CLIENT', 'CREATOR'].map((tab) => (
+                  {['CLIENT', 'MEDIA OWNER'].map((tab) => (
                     <div
                       key={tab}
                       className={`contat-tab ${activeTab === tab ? 'w--current' : ''}`}
@@ -117,7 +118,7 @@ function Contact() {
                   <div className="contact-form_wrapper">
                     <div className="contact-form_layout">
                       <div>
-                        <p className="contact-intro">We partner with ambitious brands to create relevance, advocacy and long-term growth.</p>
+                        <p className="contact-intro">We partner with ambitious advertisers to plan, target and deliver outdoor campaigns in the locations that matter most to their business.</p>
                       </div>
                       <div>
                         <form className="contact-form-2" onSubmit={handleClientSubmit}>
@@ -166,8 +167,8 @@ function Contact() {
                   </div>
                 )}
 
-                {/* CREATOR TAB */}
-                {activeTab === 'CREATOR' && (
+                {/* MEDIA OWNER TAB */}
+                {activeTab === 'MEDIA OWNER' && (
                   <div className="contact-form_wrapper">
                     <form onSubmit={handleCreatorSubmit}>
                       <div className="form-step-wrapper">
@@ -184,7 +185,7 @@ function Contact() {
                       {creatorStep === 1 && (
                         <div className="contact-form_layout">
                           <div>
-                            <p className="contact-intro">Like the look of our clients? If you're a creator, we'd love to hear from you.</p>
+                            <p className="contact-intro">Own billboards, LED screens, backlit displays or construction covers? List your spaces and connect with advertisers planning campaigns in your area.</p>
                           </div>
                           <div className="contact-form form-slider">
                             <input
@@ -219,7 +220,7 @@ function Contact() {
                                 <input
                                   className="form_input"
                                   maxLength={256}
-                                  placeholder="PLATFORM*"
+                                  placeholder="SPACE TYPE*"
                                   type="text"
                                   value={p.platform}
                                   onChange={(e) => updatePlatform(i, 'platform', e.target.value)}
@@ -228,7 +229,7 @@ function Contact() {
                                 <input
                                   className="form_input"
                                   maxLength={256}
-                                  placeholder="SOCIAL HANDLE*"
+                                  placeholder="LOCATION / CITY*"
                                   type="text"
                                   value={p.social}
                                   onChange={(e) => updatePlatform(i, 'social', e.target.value)}
@@ -237,7 +238,7 @@ function Contact() {
                               </div>
                             ))}
                             <div className="enquire-button is-not-full-width" onClick={addPlatform} style={{ cursor: 'pointer' }}>
-                              <div>ADD PLATFORM</div>
+                              <div>ADD SPACE</div>
                               <div className="circle-pink">
                                 <img loading="lazy" src={assets.svgs.groupSvg} alt="" />
                               </div>
@@ -259,7 +260,7 @@ function Contact() {
                       {creatorStep === 2 && (
                         <div className="contact-form_layout">
                           <div>
-                            <p className="contact-intro">We are unlocking advocacy, rather than buying it. and we're fishing where your competitors aren't.</p>
+                            <p className="contact-intro">Tell us about your inventory. How many advertising spaces do you operate?</p>
                           </div>
                           <div className="contact-form form-slider">
                             {followerRanges.map((range) => (
@@ -288,7 +289,7 @@ function Contact() {
                       {creatorStep === 3 && (
                         <div className="contact-form_layout">
                           <div>
-                            <p className="contact-intro">We are unlocking advocacy, rather than buying it. and we're fishing where your competitors aren't.</p>
+                            <p className="contact-intro">Which formats and location types does your inventory include?</p>
                           </div>
                           <div className="contact-form-social">
                             {interests.map((type) => (
@@ -317,7 +318,7 @@ function Contact() {
                       {creatorStep === 4 && (
                         <div className="contact-form_layout">
                           <div>
-                            <p className="contact-intro">We are unlocking advocacy, rather than buying it. and we're fishing where your competitors aren't.</p>
+                            <p className="contact-intro">Almost there. Tell us anything else about your spaces — traffic estimates, illumination, dimensions or availability.</p>
                           </div>
                           <div className="contact-form form-slider">
                             <textarea
@@ -350,81 +351,7 @@ function Contact() {
         </div>
       </section>
 
-      <section className="section_presence">
-        <div className="padding-global">
-          <div className="container-large">
-            <div className="padding-section-small clear-bottom-padding">
-              <div className="divider"></div>
-              <div className="butterverse_wrapper">
-                <div className="enter-the-butter">
-                  <div className="margin-top margin-medium">
-                    <div className="margin-bottom margin-huge butterverse_mobile">
-                      <div className="stack-left-wide">
-                        <img
-                          src={assets.svgs.enterButterverse}
-                          loading="lazy"
-                          alt="Enter The Doohpieverse"
-                          className="our-global hide-mobile-portrait"
-                        />
-                        <img
-                          src={assets.svgs.enterButterverseCenter}
-                          loading="lazy"
-                          alt="Enter The Doohpieverse"
-                          className="our-global show-mobile-portrait"
-                        />
-                        <div>
-                          <img src={assets.svgs.arrowRight} loading="lazy" alt="" className="enter-button-4rem" />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="butterverse-cta">
-                  <div className="margin-bottom margin-large">
-                    <div className="max-width-xsmall">
-                      <p data-animate className="text-size-large is-butterverse-caption">
-                        Jump over to our socials to discover our news, our views and our people.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="butterverse_social">
-                    <a href="https://www.instagram.com/doohpie" target="_blank" rel="noopener noreferrer" className="new-button is-shorter is-full-width">
-                      <div className="new-button_text is-full-width">Instagram</div>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 29 29" fill="none" className="new-button_icon">
-                        <path d="M14.5002 17.7738C16.2478 17.7738 17.6645 16.3572 17.6645 14.6096C17.6645 12.862 16.2478 11.4453 14.5002 11.4453C12.7526 11.4453 11.3359 12.862 11.3359 14.6096C11.3359 16.3572 12.7526 17.7738 14.5002 17.7738Z" fill="currentColor"></path>
-                        <path fillRule="evenodd" clipRule="evenodd" d="M18.5694 6.93555H10.4306C8.43979 6.93555 6.82617 8.54945 6.82617 10.54V18.6787C6.82617 20.6696 8.43979 22.2832 10.4306 22.2832H18.5694C20.5602 22.2832 22.1738 20.6696 22.1738 18.6787V10.54C22.1738 8.54945 20.5602 6.93555 18.5694 6.93555ZM14.5 19.4908C11.804 19.4908 9.61887 17.3054 9.61887 14.6094C9.61887 11.9134 11.804 9.72825 14.5 9.72825C17.196 9.72825 19.3814 11.9134 19.3814 14.6094C19.3814 17.3054 17.196 19.4908 14.5 19.4908ZM19.5439 10.6796C18.916 10.6796 18.4068 10.1707 18.4068 9.54246C18.4068 8.91421 18.916 8.40536 19.5439 8.40536C20.1719 8.40536 20.6813 8.91449 20.6813 9.54246C20.6813 10.1704 20.1719 10.6796 19.5439 10.6796Z" fill="currentColor"></path>
-                        <path fillRule="evenodd" clipRule="evenodd" d="M14.4999 0C6.51375 0 0 6.51375 0 14.4999C0 22.486 6.51375 29 14.4999 29C22.486 29 28.9997 22.4863 28.9997 14.4999C28.9997 6.51346 22.4863 0 14.4999 0ZM23.9061 18.5394C23.9061 21.5383 21.4754 23.9697 18.4762 23.9697H10.5235C7.52463 23.9697 5.09357 21.5383 5.09357 18.5394V10.5871C5.09357 7.58788 7.52463 5.15682 10.5235 5.15682H18.4762C21.4754 5.15682 23.9061 7.58788 23.9061 10.5871V18.5394Z" fill="currentColor"></path>
-                      </svg>
-                    </a>
-                    <a href="https://www.linkedin.com/company/doohpie" target="_blank" rel="noopener noreferrer" className="new-button is-shorter is-full-width">
-                      <div className="new-button_text is-full-width">Linkedin</div>
-                      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 46 46" width="100%" className="new-button_icon">
-                        <path d="M23,0C10.3,0,0,10.3,0,23s10.3,23,23,23c12.7,0,23-10.3,23-23S35.7,0,23,0z M16.5,34.5h-4.7V19.2h4.7V34.5z M16.9,14.3c0,0.4-0.1,0.7-0.2,1c-0.1,0.3-0.3,0.6-0.6,0.9c-0.3,0.2-0.6,0.4-0.9,0.6c-0.3,0.1-0.7,0.2-1,0.2h0 c-0.5,0-1.1-0.2-1.5-0.5c-0.4-0.3-0.8-0.7-1-1.2c-0.2-0.5-0.2-1.1-0.1-1.6c0.1-0.5,0.4-1,0.8-1.4c0.4-0.4,0.9-0.6,1.4-0.7 c0.5-0.1,1.1,0,1.6,0.2c0.5,0.2,0.9,0.6,1.2,1C16.8,13.2,16.9,13.7,16.9,14.3L16.9,14.3z M34.5,34.5h-4.7v-8.1 c0-2.5-1.4-3.5-2.7-3.5c-1.6,0-3.3,1.1-3.3,3.6v8h-4.7V19.2h4.4v2.2h0.1c0.4-0.9,2.4-2.5,5.1-2.5s5.8,1.8,5.8,6.5V34.5z" fill="currentColor"></path>
-                      </svg>
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <div className="butterverse-video_wrapper">
-                <div className="divider show-mobile-landscape"></div>
-                <div className="butterverse-video w-background-video w-background-video-atom">
-                  <video
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    style={{ backgroundImage: `url("${assets.ctaVideo.poster}")`, objectFit: 'cover', width: '100%', height: '100%' }}
-                  >
-                    <source src={assets.ctaVideo.mp4} />
-                    <source src={assets.ctaVideo.webm} />
-                  </video>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PresenceSection />
     </div>
   )
 }

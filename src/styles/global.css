@@ -2955,6 +2955,11 @@ textarea {
   padding: 0;
 }
 
+.section_logo .padding-section-small {
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+
 .logo_list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -3511,7 +3516,7 @@ textarea {
 .businessmmilk-text {
   color: var(--magenta, #4cda56);
   text-transform: uppercase;
-  font-size: 2.8125rem;
+  font-size: 2.25rem;
   font-weight: 500;
   line-height: 1;
 }
@@ -3536,7 +3541,7 @@ textarea {
     padding: 2.222vw 2.111vw;
   }
   .businessmmilk-text {
-    font-size: 3.125vw;
+    font-size: min(2.5vw, 2.25rem);
   }
   .cta_button {
     width: 16.667vw;
@@ -3549,7 +3554,7 @@ textarea {
     height: 60vh;
   }
   .businessmmilk-text {
-    font-size: 2.5rem;
+    font-size: 1.875rem;
   }
 }
 
@@ -3558,7 +3563,7 @@ textarea {
     height: 50vh;
   }
   .businessmmilk-text {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -3576,7 +3581,7 @@ textarea {
     padding-right: 0.9rem;
   }
   .businessmmilk-text {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
   }
   .cta_button {
     width: 13rem;
@@ -4371,12 +4376,16 @@ textarea {
   width: 0;
 }
 
-.typing-line-1 {
-  animation: typing-line1 1s steps(10, end) 1.5s forwards;
+.weare_heading.animate .typing-line-1 {
+  animation: typing-line1 0.6s steps(10, end) 0s forwards;
 }
 
-.typing-line-2 {
-  animation: typing-line2 1s steps(17, end) 2.5s forwards;
+.weare_heading.animate .typing-line-2 {
+  animation: typing-line2 0.6s steps(13, end) 0.65s forwards;
+}
+
+.weare_heading.animate .typing-line-3 {
+  animation: typing-line3 0.6s steps(12, end) 1.3s forwards;
 }
 
 @keyframes typing-line1 {
@@ -4385,6 +4394,11 @@ textarea {
 }
 
 @keyframes typing-line2 {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes typing-line3 {
   from { width: 0; }
   to { width: 100%; }
 }

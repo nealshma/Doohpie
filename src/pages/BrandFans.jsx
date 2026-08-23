@@ -1,5 +1,6 @@
 import { useEffect, useState, useRef } from 'react'
 import { assets } from '../assets'
+import PresenceSection from '../components/PresenceSection'
 
 const CDN = 'https://cdn.prod.website-files.com'
 
@@ -50,10 +51,10 @@ const tierImages = [
 ]
 
 const tiers = [
-  { label: 'CREATOR TIER 1', range: '1-10K' },
-  { label: 'CREATOR TIER 2', range: '10-20K' },
-  { label: 'CREATOR TIER 3', range: '20-30K' },
-  { label: 'CREATOR TIER 4', range: '3-40K' },
+  { label: 'TARGET CITY', range: 'CITY-WIDE' },
+  { label: 'NEIGHBORHOOD', range: 'RADIUS 2-5 KM' },
+  { label: 'BUSINESS DISTRICT', range: 'COMMERCIAL ZONES' },
+  { label: 'HIGHWAYS', range: 'TRAFFIC CORRIDORS' },
 ]
 
 const placeholderImg = `${CDN}/672e2799473b9e1f1dc0eb5c/675ab604e263f78becfa1e2c_placeholder.jpg`
@@ -184,13 +185,13 @@ function BrandFans() {
             <div className="padding-section-small">
               <div className="standardhero_component">
                 <p className="text-size-huge">
-                  Brand Fans is Doohpie's approach to gifting - turning product sends into a scalable engine for content, conversation and advocacy. By activating creators with real affinity for a brand, we help products travel further and faster across culture.
+                  Geo-targeting is at the core of Doohpie. Instead of selecting advertising inventory purely by format, advertisers start with a location and identify opportunities around it - building campaigns around cities, states, neighborhoods, business districts, highways and high-footfall zones.
                 </p>
                 <div className="standardhero_header">
-                  <h1 className="heading-style-h2 text-weight-normal is-service">WHAT ARE BRAND FANS ANYWAY?</h1>
+                  <h1 className="heading-style-h2 text-weight-normal is-service">WHAT IS GEO-TARGETING ANYWAY?</h1>
                   <p className="text-size-large">
-                    This isn't gifting as you know it.<br />
-                    Brand Fans are your connection to culture, generating high-quality content that drives relevance and influences action long before someone clicks "buy".
+                    This isn't buying billboards as you know it.<br />
+                    Target City → Select Area → Identify Locations → Choose Inventory → Upload Creative → Launch Campaign. It's outdoor advertising built around where your audience actually is.
                   </p>
                 </div>
               </div>
@@ -206,7 +207,7 @@ function BrandFans() {
             <div className="padding-section-small">
               <div className="starbust-images_layout" ref={starburstRef}>
                 <div className="padding-xhuge"></div>
-                <h2 className="cs2-h1 _2">GIVING YOUR BRAND TO THE TASTEMAKERS</h2>
+                <h2 className="cs2-h1 _2">START WITH A LOCATION. NOT A SPACE.</h2>
                 <div className="max-width-medium"></div>
                 {starburstImages.map((src, i) => (
                   <img
@@ -292,7 +293,7 @@ function BrandFans() {
                       </g>
                     </svg>
                   </div>
-                  <h2 className="text-color-pink followers">1-15k Followers</h2>
+                  <h2 className="text-color-pink followers">Radius-Based Targeting</h2>
                 </div>
                 <div className="brandfans-grid_image-side">
                   {cultureImages.map((src, i) => (
@@ -342,28 +343,28 @@ function BrandFans() {
                   </h1>
                   <div className="number-wrapper">
                     <div className="number-block">
-                      <div className="number-header-text">Fans Activated</div>
+                      <div className="number-header-text">Inventory Locations</div>
                       <div className="number-text">
                         <AnimatedCounter target={150} isVisible={statsVisible} />
-                        k
+                        k+
                       </div>
                     </div>
                     <div className="number-block">
-                      <div className="number-header-text">Content Shared</div>
+                      <div className="number-header-text">Cities Covered</div>
                       <div className="number-text">
-                        <AnimatedCounter target={240} isVisible={statsVisible} />
-                        k
+                        <AnimatedCounter target={50} isVisible={statsVisible} />
+                        +
                       </div>
                     </div>
                     <div className="number-block">
-                      <div className="number-header-text">Avg. Engagement Rate</div>
+                      <div className="number-header-text">Campaigns Delivered</div>
                       <div className="number-text">
-                        <AnimatedCounter target={11} isVisible={statsVisible} />
-                        %
+                        <AnimatedCounter target={1200} isVisible={statsVisible} />
+                        +
                       </div>
                     </div>
                     <p className="text-size-large brand-fans" style={{ marginTop: 32 }}>
-                      Brand Fans are integral to how we drive growth for brands. They integrate seamlessly with higher-tier creator activity and scale easily. Because we're a global agency, working on large scale programmes for global brands, Brand Fans has little to no ramp up time.
+                      Geo-targeting helps brands focus their advertising investment on areas where their potential customers are most likely to be. Imagine a retail brand launching a new store in Delhi - instead of advertising across an entire city, it can define a radius around the store, find available outdoor inventory inside that radius, and put its message in front of the people most likely to visit.
                     </p>
                   </div>
                 </div>
@@ -372,23 +373,23 @@ function BrandFans() {
                 <div className="project_wrapper">
                   <div className="project_item-wrapper">
                     <div className="full-pink-block">
-                      <div className="project_heading">OFF THE CHARTS<br />ENGAGEMENT</div>
-                      <p className="project_subheading">The average industry benchmark is 2%. Our Brand Fans campaigns deliver, on average, over 11%. That isn't just likes, but comments with positive brand sentiment, too.</p>
+                      <div className="project_heading">A STRATEGIC SHIFT<br />FOR OUTDOOR</div>
+                      <p className="project_subheading">Traditional outdoor advertising asks: "Which billboard should we buy?" Doohpie changes the question to: "Where do we want to reach our audience?" That shift makes outdoor advertising more strategic.</p>
                     </div>
                   </div>
                   <div className="project_item-wrapper">
                     <div className="full-pink-block">
-                      <div className="project_heading">REPRESENTATION MATTERS</div>
+                      <div className="project_heading">ONE WORKFLOW. EVERY FORMAT.</div>
                       <div className="project_detail">
-                        <p className="project_subheading">Brand Fans represent every culture, every lifestyle, every niche - reflecting audiences as they actually exist.</p>
+                        <p className="project_subheading">Plan across static billboards, digital LED boards, backlit displays and construction covers from one centralized environment - no more managing formats independently.</p>
                       </div>
                     </div>
                   </div>
                   <div className="project_item-wrapper">
                     <div className="full-pink-block">
-                      <div className="project_heading">Discovering advocates</div>
+                      <div className="project_heading">Focus spend where it matters</div>
                       <div className="project_detail">
-                        <p className="project_subheading">Brand Fans give brands a strategic head start, connecting them with emerging creators before they're on everyone else's radar.</p>
+                        <p className="project_subheading">Build campaigns around the geographic areas that matter most to your business - cities, neighborhoods, shopping zones, business districts and transit corridors.</p>
                       </div>
                     </div>
                   </div>
@@ -409,8 +410,8 @@ function BrandFans() {
               </div>
               <div className="cta_component">
                 <div className="businessmmilk-text">
-                  We help brands earn advocacy, not buy attention.<br />
-                  It's how they find growth beyond the obvious places.
+                  Turn locations into opportunities. Turn visibility into impact.<br />
+                  Make every location an advertising opportunity.
                 </div>
                 <div className="cta_button">
                   <button className="new-button is-shorter is-full-width">
@@ -419,88 +420,14 @@ function BrandFans() {
                     <a href="/contact" className="new-button_link"></a>
                   </button>
                 </div>
-                <div className="businessmilk-heading">LET'S MAKE SOMETHING</div>
+                <div className="businessmilk-heading">GEO-TARGET PLAN ADVERTISE</div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="section_presence">
-        <div className="padding-global">
-          <div className="container-large">
-            <div className="padding-section-small clear-bottom-padding">
-              <div className="divider"></div>
-              <div className="butterverse_wrapper">
-                <div className="enter-the-butter">
-                  <div className="margin-top margin-medium">
-                    <div className="margin-bottom margin-huge butterverse_mobile">
-                      <div className="stack-left-wide">
-                        <img
-                          src={assets.svgs.enterButterverse}
-                          loading="lazy"
-                          alt="Enter The Doohpieverse"
-                          className="our-global hide-mobile-portrait"
-                        />
-                        <img
-                          src={assets.svgs.enterButterverseCenter}
-                          loading="lazy"
-                          alt="Enter The Doohpieverse"
-                          className="our-global show-mobile-portrait"
-                        />
-                        <div>
-                          <img src={assets.svgs.arrowRight} loading="lazy" alt="" className="enter-button-4rem" />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="butterverse-cta">
-                  <div className="margin-bottom margin-large">
-                    <div className="max-width-xsmall">
-                      <p data-animate className="text-size-large is-butterverse-caption">
-                        Jump over to our socials to discover our news, our views and our people.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="butterverse_social">
-                    <a href="https://www.instagram.com/doohpie" target="_blank" rel="noopener noreferrer" className="new-button is-shorter is-full-width">
-                      <div className="new-button_text is-full-width">Instagram</div>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 29 29" fill="none" className="new-button_icon">
-                        <path d="M14.5002 17.7738C16.2478 17.7738 17.6645 16.3572 17.6645 14.6096C17.6645 12.862 16.2478 11.4453 14.5002 11.4453C12.7526 11.4453 11.3359 12.862 11.3359 14.6096C11.3359 16.3572 12.7526 17.7738 14.5002 17.7738Z" fill="currentColor"></path>
-                        <path fillRule="evenodd" clipRule="evenodd" d="M18.5694 6.93555H10.4306C8.43979 6.93555 6.82617 8.54945 6.82617 10.54V18.6787C6.82617 20.6696 8.43979 22.2832 10.4306 22.2832H18.5694C20.5602 22.2832 22.1738 20.6696 22.1738 18.6787V10.54C22.1738 8.54945 20.5602 6.93555 18.5694 6.93555ZM14.5 19.4908C11.804 19.4908 9.61887 17.3054 9.61887 14.6094C9.61887 11.9134 11.804 9.72825 14.5 9.72825C17.196 9.72825 19.3814 11.9134 19.3814 14.6094C19.3814 17.3054 17.196 19.4908 14.5 19.4908ZM19.5439 10.6796C18.916 10.6796 18.4068 10.1707 18.4068 9.54246C18.4068 8.91421 18.916 8.40536 19.5439 8.40536C20.1719 8.40536 20.6813 8.91449 20.6813 9.54246C20.6813 10.1704 20.1719 10.6796 19.5439 10.6796Z" fill="currentColor"></path>
-                        <path fillRule="evenodd" clipRule="evenodd" d="M14.4999 0C6.51375 0 0 6.51375 0 14.4999C0 22.486 6.51375 29 14.4999 29C22.486 29 28.9997 22.4863 28.9997 14.4999C28.9997 6.51346 22.4863 0 14.4999 0ZM23.9061 18.5394C23.9061 21.5383 21.4754 23.9697 18.4762 23.9697H10.5235C7.52463 23.9697 5.09357 21.5383 5.09357 18.5394V10.5871C5.09357 7.58788 7.52463 5.15682 10.5235 5.15682H18.4762C21.4754 5.15682 23.9061 7.58788 23.9061 10.5871V18.5394Z" fill="currentColor"></path>
-                      </svg>
-                    </a>
-                    <a href="https://www.linkedin.com/company/doohpie" target="_blank" rel="noopener noreferrer" className="new-button is-shorter is-full-width">
-                      <div className="new-button_text is-full-width">Linkedin</div>
-                      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 46 46" width="100%" className="new-button_icon">
-                        <path d="M23,0C10.3,0,0,10.3,0,23s10.3,23,23,23c12.7,0,23-10.3,23-23S35.7,0,23,0z M16.5,34.5h-4.7V19.2h4.7V34.5z M16.9,14.3c0,0.4-0.1,0.7-0.2,1c-0.1,0.3-0.3,0.6-0.6,0.9c-0.3,0.2-0.6,0.4-0.9,0.6c-0.3,0.1-0.7,0.2-1,0.2h0 c-0.5,0-1.1-0.2-1.5-0.5c-0.4-0.3-0.8-0.7-1-1.2c-0.2-0.5-0.2-1.1-0.1-1.6c0.1-0.5,0.4-1,0.8-1.4c0.4-0.4,0.9-0.6,1.4-0.7 c0.5-0.1,1.1,0,1.6,0.2c0.5,0.2,0.9,0.6,1.2,1C16.8,13.2,16.9,13.7,16.9,14.3L16.9,14.3z M34.5,34.5h-4.7v-8.1 c0-2.5-1.4-3.5-2.7-3.5c-1.6,0-3.3,1.1-3.3,3.6v8h-4.7V19.2h4.4v2.2h0.1c0.4-0.9,2.4-2.5,5.1-2.5s5.8,1.8,5.8,6.5V34.5z" fill="currentColor"></path>
-                      </svg>
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <div className="butterverse-video_wrapper">
-                <div className="divider show-mobile-landscape"></div>
-                <div className="butterverse-video w-background-video w-background-video-atom">
-                  <video
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    style={{ backgroundImage: `url("${assets.ctaVideo.poster}")`, objectFit: 'cover', width: '100%', height: '100%' }}
-                  >
-                    <source src={assets.ctaVideo.mp4} />
-                    <source src={assets.ctaVideo.webm} />
-                  </video>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PresenceSection />
     </div>
   )
 }

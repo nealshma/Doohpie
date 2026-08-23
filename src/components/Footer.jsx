@@ -43,17 +43,24 @@ function Footer() {
                 <div className="stack-top">
                   <div>
                     <div className="margin-bottom margin-medium">
-                      <img
-                        src={assets.svgs.milkFor}
-                        alt="Doohpie For The Creators"
+                      <div
                         className="our-global"
-                        style={{ filter: 'brightness(0) invert(1)' }}
-                      />
+                        style={{
+                          fontSize: 'clamp(2.5rem, 6vw, 5rem)',
+                          fontWeight: 700,
+                          lineHeight: 0.95,
+                          letterSpacing: '-0.02em',
+                          textTransform: 'uppercase',
+                          color: '#fff',
+                        }}
+                      >
+                        OOH For<br />Every Brand
+                      </div>
                     </div>
                     <div className="we-work_text max-width-small">
                       <div className="margin-bottom margin-medium">
                         <p className="text-size-small text-style-allcaps">
-                          Sign up for news on culture, creators and how we're building equity for the world's biggest brands.
+                          Sign up for platform updates, new inventory locations, city launches and geo-targeting insights.
                         </p>
                       </div>
                     </div>
