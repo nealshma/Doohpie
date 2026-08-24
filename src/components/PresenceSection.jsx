@@ -1,13 +1,37 @@
 import { assets } from '../assets'
+import { useEffect, useRef } from 'react'
 
 function PresenceSection() {
+  const topDividerRef = useRef(null)
+  const bottomDividerRef = useRef(null)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (topDividerRef.current) {
+        const rect = topDividerRef.current.getBoundingClientRect()
+        const isVisible = rect.top < window.innerHeight && rect.bottom >= 0
+        topDividerRef.current.classList[isVisible ? 'add' : 'remove']('animate')
+      }
+      if (bottomDividerRef.current) {
+        const rect = bottomDividerRef.current.getBoundingClientRect()
+        const isVisible = rect.top < window.innerHeight && rect.bottom >= 0
+        bottomDividerRef.current.classList[isVisible ? 'add' : 'remove']('animate')
+      }
+    }
+
+    // Initial check on mount
+    handleScroll()
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
   return (
     <section className="section_presence">
       <div className="padding-global">
         <div className="container-large">
           <div className="padding-section-small clear-bottom-padding">
-            <div className="divider"></div>
-            <div className="butterverse_wrapper">
+<div className="divider" ref={topDividerRef}></div>
+<div className="butterverse_wrapper">
               <div className="enter-the-butter">
                 <div className="margin-top margin-medium">
                   <div className="margin-bottom margin-huge butterverse_mobile">
@@ -76,7 +100,7 @@ function PresenceSection() {
             </div>
 
             <div className="butterverse-video_wrapper">
-              <div className="divider show-mobile-landscape"></div>
+              <div className="divider show-mobile-landscape" ref={bottomDividerRef}></div>
               <div className="butterverse-video w-background-video w-background-video-atom">
                 <video
                   autoPlay
@@ -90,6 +114,7 @@ function PresenceSection() {
                 </video>
               </div>
             </div>
+            <div className="divider" ref={bottomDividerRef} />
           </div>
         </div>
       </div>

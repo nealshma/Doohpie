@@ -574,6 +574,7 @@ function Home() {
 
       {/* Presence / Enter Doohpieverse Section */}
       <PresenceSection />
+      <div className="divider" />
     </div>
   )
 }

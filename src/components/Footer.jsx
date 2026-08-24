@@ -38,7 +38,7 @@ function Footer() {
         <div className="container-large">
           <div className="padding-section-small is-footer">
 
-            <div className="margin-bottom margin-large is-footer">
+            <div className="margin-bottom margin-medium is-footer">
               <div className="footer_header">
                 <div className="stack-top">
                   <div>
@@ -154,8 +154,8 @@ function Footer() {
               </div>
             </div>
 
-            <div className="margin-bottom margin-large is-footer">
-              <div className="margin-top margin-large">
+            <div className="margin-bottom margin-medium is-footer">
+              <div className="margin-top margin-medium">
                 <svg width="0" height="0" style={{ position: 'absolute' }} aria-hidden="true">
                   <filter id="logo-sharpen" x="-5%" y="-5%" width="110%" height="110%" colorInterpolationFilters="sRGB">
                     <feGaussianBlur in="SourceGraphic" stdDeviation="0.55" result="blurred" />
