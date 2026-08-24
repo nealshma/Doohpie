@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 import { assets } from '../assets'
-import doohpieLogo4x from '../assets/doohpie-logo-4x.png'
 
 function Footer() {
   const [email, setEmail] = useState('')
@@ -163,7 +162,7 @@ function Footer() {
                   </filter>
                 </svg>
                 <img
-                  src={doohpieLogo4x}
+                  src="https://cdn.pixelkart.ai/uploads/2026/august/24/creative_486f5dbf.png"
                   alt="Doohpie Logo"
                   className="buttermilk-large-wide"
                   style={{ filter: 'url(#logo-sharpen) brightness(0) invert(1)', opacity: 1 }}
