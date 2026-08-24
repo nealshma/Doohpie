@@ -1,8 +1,6 @@
-import { useEffect, useRef, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { useRef } from 'react'
 import {
   motion,
-  useInView,
   useMotionTemplate,
   useMotionValue,
   useScroll,
@@ -11,109 +9,15 @@ import {
 } from 'motion/react'
 import { assets } from '../assets'
 import PresenceSection from '../components/PresenceSection'
-
-const EASE = [0.22, 1, 0.36, 1]
-
-const fadeUp = {
-  hidden: { opacity: 0, y: 28 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.7, ease: EASE } },
-}
-
-const staggerContainer = {
-  hidden: {},
-  show: { transition: { staggerChildren: 0.12, delayChildren: 0.05 } },
-}
-
-function SplitWords({ text, wordClassName = '', delayStart = 0 }) {
-  const words = text.split(' ')
-  return (
-    <>
-      {words.map((word, i) => (
-        <span className="split-word-mask" key={`${word}-${i}`}>
-          <motion.span
-            className={wordClassName}
-            initial={{ y: '115%' }}
-            whileInView={{ y: '0%' }}
-            viewport={{ once: true, margin: '-60px' }}
-            transition={{ duration: 0.8, delay: delayStart + i * 0.07, ease: EASE }}
-          >
-            {word}
-          </motion.span>
-          {i < words.length - 1 ? ' ' : ''}
-        </span>
-      ))}
-    </>
-  )
-}
-
-function SpotlightCard({ as: Tag = 'div', className = '', children, ...rest }) {
-  const cardRef = useRef(null)
-
-  const handleMouseMove = (e) => {
-    const card = cardRef.current
-    if (!card) return
-    const rect = card.getBoundingClientRect()
-    card.style.setProperty('--spot-x', `${e.clientX - rect.left}px`)
-    card.style.setProperty('--spot-y', `${e.clientY - rect.top}px`)
-  }
-
-  return (
-    <Tag ref={cardRef} className={`spotlight-card ${className}`} onMouseMove={handleMouseMove} {...rest}>
-      {children}
-    </Tag>
-  )
-}
-
-function MagneticLink({ to, className, children }) {
-  const wrapRef = useRef(null)
-  const x = useMotionValue(0)
-  const y = useMotionValue(0)
-  const springX = useSpring(x, { stiffness: 300, damping: 22, mass: 0.5 })
-  const springY = useSpring(y, { stiffness: 300, damping: 22, mass: 0.5 })
-
-  const handleMouseMove = (e) => {
-    const rect = wrapRef.current.getBoundingClientRect()
-    x.set((e.clientX - rect.left - rect.width / 2) * 0.35)
-    y.set((e.clientY - rect.top - rect.height / 2) * 0.35)
-  }
-  const handleMouseLeave = () => {
-    x.set(0)
-    y.set(0)
-  }
-
-  return (
-    <motion.div
-      ref={wrapRef}
-      style={{ x: springX, y: springY, display: 'inline-block' }}
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
-    >
-      <Link to={to} className={className}>{children}</Link>
-    </motion.div>
-  )
-}
-
-function AnimatedCounter({ target, prefix = '', suffix = '', duration = 1800, format = false }) {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: '-80px' })
-  const [count, setCount] = useState(0)
-
-  useEffect(() => {
-    if (!isInView) return
-    let start = 0
-    const increment = target / (duration / 16)
-    const timer = setInterval(() => {
-      start += increment
-      if (start >= target) { setCount(target); clearInterval(timer) }
-      else { setCount(Math.floor(start)) }
-    }, 16)
-    return () => clearInterval(timer)
-  }, [isInView, target, duration])
-
-  const displayValue = format ? count.toLocaleString('en-US') : count
-
-  return <span ref={ref}>{prefix}{displayValue}{suffix}</span>
-}
+import {
+  EASE,
+  fadeUp,
+  staggerContainer,
+  SplitWords,
+  SpotlightCard,
+  MagneticLink,
+  AnimatedCounter,
+} from '../components/motion-ui'
 
 function FillWord({ word, progress, range, accent = false }) {
   const opacity = useTransform(progress, range, [0.14, 1])
@@ -263,7 +167,7 @@ function About() {
 
   return (
     <div className="page-content-wrapper about-page-wrapper">
-      <motion.div className="about-scroll-progress" style={{ scaleX: pageProgressSmooth }} />
+      <motion.div className="scroll-progress-bar" style={{ scaleX: pageProgressSmooth }} />
 
       {/* Standard Hero Section with Balloon */}
       <section
@@ -418,8 +322,8 @@ function About() {
             </div>
           </div>
         </div>
-        <div className="about-scroll-cue">
-          <span className="about-scroll-cue-dot" />
+        <div className="scroll-cue">
+          <span className="scroll-cue-dot" />
           <span>SCROLL</span>
         </div>
       </section>

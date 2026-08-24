@@ -1,8 +1,14 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
-import lottie from 'lottie-web'
+import { motion, useScroll, useSpring } from 'motion/react'
 import { assets } from '../assets'
 import PresenceSection from '../components/PresenceSection'
+import {
+  EASE,
+  fadeUp,
+  staggerContainer,
+  MagneticLink,
+} from '../components/motion-ui'
 
 const services = [
   { id: 1, title: 'STATIC BILLBOARDS', description: 'Large-format, high-impact displays for continuous brand visibility in high-traffic locations.' },
@@ -159,7 +165,6 @@ function useReliableVideo(ref) {
 }
 
 function Home() {
-  const heroLogoRef = useRef(null)
   const svgDrawRef = useRef(null)
   const weareHeadingRef = useRef(null)
   const desktopVideoRef = useRef(null)
@@ -168,15 +173,8 @@ function Home() {
   useReliableVideo(desktopVideoRef)
   useReliableVideo(mobileVideoRef)
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      if (heroLogoRef.current) {
-        heroLogoRef.current.style.opacity = '1'
-        heroLogoRef.current.style.transition = 'opacity 1.5s ease'
-      }
-    }, 500)
-    return () => clearTimeout(timer)
-  }, [])
+  const { scrollYProgress: pageProgress } = useScroll()
+  const pageProgressSmooth = useSpring(pageProgress, { stiffness: 120, damping: 26, mass: 0.4 })
 
   useEffect(() => {
     if (!svgDrawRef.current) return
@@ -218,6 +216,8 @@ function Home() {
 
   return (
     <div className="home-page-wrapper">
+      <motion.div className="scroll-progress-bar" style={{ scaleX: pageProgressSmooth }} />
+
       {/* Hero Section */}
       <section className="section_hero is-homepage">
         <div className="homepage_slider_video is-desktop w-background-video w-background-video-atom">
@@ -251,13 +251,18 @@ function Home() {
             </a>
           </div>
         </div>
-        <img
-          ref={heroLogoRef}
+        <motion.img
           className="buttermilk-large-wide is-hero"
           src={assets.logo.white}
           alt="Doohpie Logo"
-          style={{ opacity: 0 }}
+          initial={{ opacity: 0, scale: 0.92, x: '-50%' }}
+          animate={{ opacity: 1, scale: 1, x: '-50%' }}
+          transition={{ duration: 1.5, delay: 0.4, ease: EASE }}
         />
+        <div className="hero-scroll-cue scroll-cue">
+          <span className="scroll-cue-dot" />
+          <span>SCROLL</span>
+        </div>
       </section>
 
       {/* Buttermilk / Creator Company Section */}
@@ -265,18 +270,24 @@ function Home() {
         <div className="padding-global">
           <div className="container-large">
             <div className="padding-section-small">
-              <div className="buttermilk_component">
-                <div data-animate className="communities_eyebrow text-size-large text-style-allcaps hide-mobile-portrait">
+              <motion.div
+                className="buttermilk_component"
+                variants={staggerContainer}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true, amount: 0.3 }}
+              >
+                <motion.div className="communities_eyebrow text-size-large text-style-allcaps hide-mobile-portrait" variants={fadeUp}>
                   THE GEO-TARGETED OOH PLATFORM
-                </div>
-                <div data-animate className="communities_eyebrow text-size-large text-style-allcaps text-align-right">
+                </motion.div>
+                <motion.div className="communities_eyebrow text-size-large text-style-allcaps text-align-right" variants={fadeUp}>
                   REACH THE RIGHT AUDIENCE. IN THE RIGHT PLACE.
-                </div>
-                <p data-animate className="text-size-large custom-homepage">
+                </motion.div>
+                <motion.p className="text-size-large custom-homepage" variants={fadeUp}>
                   Doohpie is a location-powered advertising platform for planning and managing OOH & DOOH campaigns.
 With geo-targeting at its core, reach audiences across cities, neighborhoods, and high-traffic locations.
-                </p>
-              </div>
+                </motion.p>
+              </motion.div>
             </div>
           </div>
         </div>
@@ -287,7 +298,7 @@ With geo-targeting at its core, reach audiences across cities, neighborhoods, an
         <div className="padding-global">
           <div className="container-large">
             <div className="padding-section-small">
-              <div className="weare_component">
+              <div className="weare_component weare-glow">
                 <div className="weare_svg-wrapper" ref={svgDrawRef}>
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="-250 130 1500 870" width="950" height="850">
                     {/* Stylish Cursive Script "D" */}
@@ -335,7 +346,13 @@ With geo-targeting at its core, reach audiences across cities, neighborhoods, an
               <div className="homeservice_component">
                 {/* Video card */}
                 <div className="homeservice_item hide-mobile-portrait is-service is-larger">
-                  <div data-animate-scale className="homeservice_card">
+                  <motion.div
+                    className="homeservice_card media-hover-card"
+                    initial={{ opacity: 0, scale: 0.94 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true, amount: 0.3 }}
+                    transition={{ duration: 0.8, ease: EASE }}
+                  >
                     <div className="homeservice_image-wrapper">
                       <div className="homeservice_image is-video w-background-video w-background-video-atom">
                         <video
@@ -353,12 +370,18 @@ With geo-targeting at its core, reach audiences across cities, neighborhoods, an
                       <img src={assets.svgs.arrowRight} loading="lazy" alt="" className="homeservice_icon" />
                       <div className="homeservice_text">STATIC BILLBOARD — HIGHWAY</div>
                     </div>
-                  </div>
+                  </motion.div>
                 </div>
 
                 {/* Image card */}
                 <div className="homeservice_item hide-mobile-portrait is-service is-smaller">
-                  <div data-animate-scale className="homeservice_card">
+                  <motion.div
+                    className="homeservice_card media-hover-card"
+                    initial={{ opacity: 0, scale: 0.94 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true, amount: 0.3 }}
+                    transition={{ duration: 0.8, delay: 0.1, ease: EASE }}
+                  >
                     <div className="homeservice_image-wrapper is-short">
                       <img src={assets.homeservice.bellhueImage} loading="lazy" alt="" className="homeservice_image is-short" />
                     </div>
@@ -366,7 +389,7 @@ With geo-targeting at its core, reach audiences across cities, neighborhoods, an
                       <img src={assets.svgs.arrowRight} loading="lazy" alt="" className="homeservice_icon" />
                       <div className="homeservice_text">DIGITAL LED — CITY CENTRE</div>
                     </div>
-                  </div>
+                  </motion.div>
                 </div>
 
                 {/* Content column */}
@@ -380,9 +403,9 @@ With geo-targeting at its core, reach audiences across cities, neighborhoods, an
                       Target a city, select an area, identify locations, choose your spaces, upload creative and launch. That's outdoor advertising, reimagined around where your audience actually is.
                     </p>
                   </div>
-                  <Link data-animate to="/ad-formats" className="text-style-link">
+                  <MagneticLink to="/ad-formats" className="text-style-link" strength={0.25}>
                     EXPLORE AD FORMATS →
-                  </Link>
+                  </MagneticLink>
                 </div>
 
                 {/* Mobile-only image */}
@@ -436,17 +459,23 @@ With geo-targeting at its core, reach audiences across cities, neighborhoods, an
                   </div>
                 </div>
               </div>
-              <div className="w-layout-grid logo_list">
+              <motion.div
+                className="w-layout-grid logo_list"
+                variants={staggerContainer}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true, amount: 0.15 }}
+              >
                 {assets.clientLogos.map((logo, i) => (
-                  <div className="logo_wrapper" key={i}>
+                  <motion.div className="logo_wrapper" key={i} variants={fadeUp}>
                     <img
                       src={logo}
                       alt={`Client ${i + 1}`}
                       className="logo_logo"
                     />
-                  </div>
+                  </motion.div>
                 ))}
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>
@@ -471,11 +500,17 @@ With geo-targeting at its core, reach audiences across cities, neighborhoods, an
                     <div className="margin-bottom margin-large map-custom-mobile">
                       <div className="map_content-header">
                         <div className="margin-bottom margin-medium custom-clock-mobile">
-                          <div className="map_content-clock-wrapper">
-                            <TimePill timezone="Europe/London" city="London, uk" />
-                            <TimePill timezone="America/New_York" city="New York, usa" />
-                            <TimePill timezone="Asia/Dubai" city="Dubai, uae" />
-                          </div>
+                          <motion.div
+                            className="map_content-clock-wrapper"
+                            variants={staggerContainer}
+                            initial="hidden"
+                            whileInView="show"
+                            viewport={{ once: true }}
+                          >
+                            <motion.div variants={fadeUp}><TimePill timezone="Europe/London" city="London, uk" /></motion.div>
+                            <motion.div variants={fadeUp}><TimePill timezone="America/New_York" city="New York, usa" /></motion.div>
+                            <motion.div variants={fadeUp}><TimePill timezone="Asia/Dubai" city="Dubai, uae" /></motion.div>
+                          </motion.div>
                         </div>
                         <div className="max-width-xsmall">
                           <p data-animate className="map_content-heading">
@@ -484,7 +519,7 @@ With geo-targeting at its core, reach audiences across cities, neighborhoods, an
                         </div>
                         <div className="margin-bottom margin-medium">
                           <div className="map_right show-mobile-portrait">
-                            <div className="map_wrapper">
+                            <div className="map_wrapper map-glow">
                               <img
                                 src={assets.map}
                                 alt="Global Map"
@@ -503,7 +538,7 @@ With geo-targeting at its core, reach audiences across cities, neighborhoods, an
                   </div>
                 </div>
                 <div className="map_right hide-mobile-portrait">
-                  <div className="map_wrapper">
+                  <div className="map_wrapper map-glow">
                     <img src={assets.map} alt="Global Map" className="map-image" />
                   </div>
                 </div>
@@ -519,15 +554,21 @@ With geo-targeting at its core, reach audiences across cities, neighborhoods, an
         <div className="padding-global">
           <div className="container-large">
             <div className="padding-section-small global-creator">
-              <div className="margin-bottom margin-large">
+              <motion.div
+                className="margin-bottom margin-large"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.4 }}
+                transition={{ duration: 0.7, ease: EASE }}
+              >
                 <div className="header-wrapper">
                   <h2 className="carousel_heading">One Platform. Multiple Advertising Formats.</h2>
                 </div>
-              </div>
+              </motion.div>
               <section className="section_projectcarousel">
                 <div className="projectcarousel_component">
                   <div className="projectcarousel_wrapper">
-                    <div className="projectcarousel_marquee-track">
+                    <div className="projectcarousel_marquee-track marquee-fade-edge">
                       <div className="projectcarousel_marquee row-1">
                         {[...assets.carousel, ...assets.carousel].map((project, i) => (
                           <ProjectCard project={project} variant="case-study" key={`cs-${i}`} />
@@ -538,9 +579,9 @@ With geo-targeting at its core, reach audiences across cities, neighborhoods, an
                   </div>
                 </div>
               </section>
-              <Link to="/work" className="text-size-regular text-style-underline">
+              <MagneticLink to="/work" className="text-size-regular text-style-underline" strength={0.25}>
                 VIEW ALL CAMPAIGNS →
-              </Link>
+              </MagneticLink>
             </div>
           </div>
         </div>
