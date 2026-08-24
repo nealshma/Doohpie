@@ -318,7 +318,7 @@ function Contact() {
                       {creatorStep === 4 && (
                         <div className="contact-form_layout">
                           <div>
-                            <p className="contact-intro">Almost there. Tell us anything else about your spaces — traffic estimates, illumination, dimensions or availability.</p>
+                            <p className="contact-intro">Almost there! Tell us anything else about your spaces — traffic estimates, illumination, dimensions or availability.</p>
                           </div>
                           <div className="contact-form form-slider">
                             <textarea
