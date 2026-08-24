@@ -2884,24 +2884,36 @@ textarea {
 
 /* ===== SECTION BUTTERMILK (THE CREATOR COMPANY) ===== */
 .section_buttermilk {
-  padding: 0;
+  padding: 4rem 0 0;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.section_buttermilk .padding-section-small {
+  padding-bottom: 0;
 }
 
 .buttermilk_component {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto;
-  grid-column-gap: 36px;
-  grid-row-gap: 36px;
+  grid-column-gap: 24px;
+  grid-row-gap: 24px;
+  align-items: start;
 }
 
 .communities_eyebrow {
-  color: #98989a;
-  font-size: clamp(0.75rem, 1.2vw, 1rem);
-  font-weight: 500;
-  line-height: 1.4;
+  color: #4cda56;
+  font-size: clamp(0.85rem, 1.5vw, 1.1rem);
+  font-weight: 600;
+  line-height: 1.3;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
+  background: linear-gradient(135deg, #4cda56 0%, #fff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  /* margin-bottom: 8px; */
 }
 
 .text-align-right {
@@ -2909,31 +2921,47 @@ textarea {
 }
 
 .text-size-large.custom-homepage {
-  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-size: clamp(1.3rem, 4vw, 1.9rem);
   font-weight: 500;
-  line-height: 1.15;
+  line-height: 1.3;
   color: #fff;
   grid-column: span 2;
+  align-self: center;
 }
 
 @media screen and (max-width: 479px) {
   .buttermilk_component {
     grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: 16px;
   }
-  .communities_eyebrow.text-size-large.text-style-allcaps {
-    font-size: 0.75rem;
+  .communities_eyebrow {
+    font-size: 0.85rem;
+  }
+  .text-size-large.custom-homepage {
+    font-size: 1.6rem;
+    grid-column: span 1;
   }
 }
 
 /* ===== SECTION WEARE ===== */
 .section_weare {
-  padding: 0;
+  padding: 0 0 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.section_weare .padding-section-small {
+  padding-top: 0;
 }
 
 .weare_component {
   display: flex;
   align-items: center;
   gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-top: 0;
 }
 
 .weare_svg-wrapper {
@@ -2957,7 +2985,7 @@ textarea {
   flex: 1;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1400px) {
   .weare_component {
     flex-direction: column;
     text-align: center;

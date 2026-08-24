@@ -273,7 +273,8 @@ function Home() {
                   REACH THE RIGHT AUDIENCE. IN THE RIGHT PLACE.
                 </div>
                 <p data-animate className="text-size-large custom-homepage">
-                  Doohpie is a location-powered advertising platform that helps advertisers plan, target, manage and deliver out-of-home and digital out-of-home campaigns across high-impact physical and digital spaces. With geo-targeting at the core, you can build campaigns around specific cities, neighborhoods and high-traffic zones.
+                  Doohpie is a location-powered advertising platform for planning and managing OOH & DOOH campaigns.
+With geo-targeting at its core, reach audiences across cities, neighborhoods, and high-traffic locations.
                 </p>
               </div>
             </div>
@@ -288,7 +289,7 @@ function Home() {
             <div className="padding-section-small">
               <div className="weare_component">
                 <div className="weare_svg-wrapper" ref={svgDrawRef}>
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="-250 0 1500 1000" width="950" height="850">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="-250 130 1500 870" width="950" height="850">
                     {/* Stylish Cursive Script "D" */}
                     <text x="-220" y="950"
                           fontFamily="'Pinyon Script', 'Great Vibes', cursive"
