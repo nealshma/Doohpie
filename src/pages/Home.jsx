@@ -247,7 +247,7 @@ function Home() {
           </video>
           <div className="logo-mask-mobile_wrapper homepage">
             <a href="#" className="logo-mask-mobile">
-              <img src={assets.svgs.group1326} loading="eager" alt="" className="homepage_mobile-logo-masked" />
+              <img className="buttermilk-large-wide is-hero" src="https://cdn.pixelkart.ai/uploads/2026/august/18/creative_35391abd.png" alt="Doohpie Logo" />
             </a>
           </div>
         </div>
