@@ -9,6 +9,8 @@ import Contact from './pages/Contact'
 
 import BrandFans from './pages/BrandFans'
 import Signup from './pages/Signup'
+import TermsConditions from './pages/TermsConditions'
+import PrivacyPolicy from './pages/PrivacyPolicy'
 
 function App() {
   return (
@@ -24,6 +26,8 @@ function App() {
 
           <Route path="/geo-targeting" element={<BrandFans />} />
           <Route path="/get-started" element={<Signup />} />
+          <Route path="/terms-conditions" element={<TermsConditions />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         </Routes>
       </Layout>
     </Router>
