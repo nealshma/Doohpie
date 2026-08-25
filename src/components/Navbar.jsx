@@ -22,7 +22,7 @@ function Navbar() {
     { path: '/blog', label: 'BLOG' },
     { path: '/geo-targeting', label: 'GEO TARGETING' },
     { path: '/get-started', label: 'GET STARTED' },
-    { path: '/careers', label: 'CAREERS' },
+
     { path: '/contact', label: 'CONTACT' },
   ]
 

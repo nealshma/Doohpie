@@ -6,7 +6,7 @@ import Services from './pages/Services'
 import Work from './pages/Work'
 import Blog from './pages/Blog'
 import Contact from './pages/Contact'
-import Careers from './pages/Careers'
+
 import BrandFans from './pages/BrandFans'
 import Signup from './pages/Signup'
 
@@ -21,7 +21,7 @@ function App() {
           <Route path="/work" element={<Work />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/careers" element={<Careers />} />
+
           <Route path="/geo-targeting" element={<BrandFans />} />
           <Route path="/get-started" element={<Signup />} />
         </Routes>
