@@ -48,7 +48,7 @@ export const assets = {
     chevronUp: `${CDN}/672e2799473b9e1f1dc0eb5c/672e2799473b9e1f1dc0ee52_icon_chevron_up.svg`,
     frame1058: `${CDN}/672e2799473b9e1f1dc0eb5c/672e2799473b9e1f1dc0ee71_Frame%201058.svg`,
     opportunities: `${CDN}/672e2799473b9e1f1dc0eb5c/672e2799473b9e1f1dc0ee72_OPPORTUNITIES.svg`,
-    group1320: `${CDN}/672e2799473b9e1f1dc0eb5c/672e2799473b9e1f1dc0ee9d_Group%201320.webp`,
+    group1320: `https://cdn.pixelkart.ai/uploads/2026/august/25/creative_f0f4bac2.png`,
     group1326: `${CDN}/672e2799473b9e1f1dc0eb5c/672e2799473b9e1f1dc0ef1a_Group%201326.svg`,
     group817: `${CDN}/672e2799473b9e1f1dc0eb5c/672e2799473b9e1f1dc0eb6c_Group%20817.svg`,
     groupSvg: `${CDN}/672e2799473b9e1f1dc0eb5c/672e2799473b9e1f1dc0edf9_Group.svg`,

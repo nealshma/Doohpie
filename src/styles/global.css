@@ -5066,6 +5066,15 @@ textarea {
   .hide-mobile-portrait {
     display: none !important;
   }
+  .show-mobile-portrait .homeservice_image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    border-radius: 20px;
+    display: block;
+    /* filter: invert(48%) sepia(93%) saturate(1352%) hue-rotate(86deg) brightness(102%) contrast(105%); */
+  }
 }
 
 /* ===== NO SELECT ===== */
