@@ -345,7 +345,7 @@ With geo-targeting at its core, reach audiences across cities, neighborhoods, an
             <div className="padding-section-small">
               <div className="homeservice_component">
                 {/* Video card */}
-                <div className="homeservice_item hide-mobile-portrait is-service is-larger">
+                <div className="homeservice_item is-service is-larger">
                   <motion.div
                     className="homeservice_card media-hover-card"
                     initial={{ opacity: 0, scale: 0.94 }}
@@ -374,7 +374,7 @@ With geo-targeting at its core, reach audiences across cities, neighborhoods, an
                 </div>
 
                 {/* Image card */}
-                <div className="homeservice_item hide-mobile-portrait is-service is-smaller">
+                <div className="homeservice_item is-service is-smaller">
                   <motion.div
                     className="homeservice_card media-hover-card"
                     initial={{ opacity: 0, scale: 0.94 }}
@@ -406,13 +406,6 @@ With geo-targeting at its core, reach audiences across cities, neighborhoods, an
                   <MagneticLink to="/ad-formats" className="text-style-link" strength={0.25}>
                     EXPLORE AD FORMATS →
                   </MagneticLink>
-                </div>
-
-                {/* Mobile-only image */}
-                <div className="margin-bottom margin-large show-mobile-portrait">
-                  <div className="homeservice_item">
-                    <img data-animate-scale src={assets.svgs.group1320} alt="" className="homeservice_image" />
-                  </div>
                 </div>
 
                 {/* Services list + image */}

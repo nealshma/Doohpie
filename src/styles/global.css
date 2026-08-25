@@ -1164,6 +1164,7 @@ textarea {
   display: flex;
   flex-flow: wrap;
   gap: 1rem;
+  margin-top: 1.5rem;
 }
 
 .map_content-heading {
