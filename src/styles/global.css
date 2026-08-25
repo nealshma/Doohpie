@@ -2547,14 +2547,14 @@ textarea {
 .casestudy-component {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 24px;
+  gap: 16px;
 }
 
 .casestudy-card {
   position: relative;
-  border-radius: 16px;
+  border-radius: 12px;
   overflow: hidden;
-  aspect-ratio: 4/5;
+  aspect-ratio: 3/2;
   background: #111;
 }
 
@@ -4123,6 +4123,24 @@ textarea {
   margin-top: 2.2rem;
   padding-top: 1.6rem;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+@media screen and (max-width: 479px) {
+  .about-hero-stats {
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+  }
+  .about-hero-stat-chip {
+    flex: 1 1 0;
+    min-width: 0;
+    text-align: center;
+  }
+  .about-hero-stat-chip-value {
+    font-size: 1rem;
+  }
+  .about-hero-stat-chip-label {
+    font-size: 0.6rem;
+  }
 }
 
 .about-hero-stat-chip {
