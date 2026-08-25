@@ -654,8 +654,8 @@ textarea {
 
 /* ===== STANDARD HERO (inner pages) ===== */
 .section-standardhero {
-  padding-top: 160px;
-  padding-bottom: 80px;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
 .standardhero-component {
@@ -2818,8 +2818,8 @@ textarea {
   }
 
   .section-standardhero {
-    padding-top: 120px;
-    padding-bottom: 48px;
+    padding-top: 24px;
+    padding-bottom: 24px;
   }
 
   .section-careerhero,
@@ -5821,6 +5821,103 @@ textarea {
   }
   .legal-body {
     font-size: 0.82rem;
+  }
+}
+
+/* ===== WORK PAGE - STAT CARDS ===== */
+@media screen and (max-width: 767px) {
+  .work-stats-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .work-stats-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ===== WORK PAGE - PROCESS STEPS ===== */
+@media screen and (max-width: 767px) {
+  .work-process-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ===== WORK PAGE - FEATURED CASE STUDY IMAGES ===== */
+.work-featured-images {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  padding: 48px;
+  min-height: 500px;
+  align-items: center;
+}
+
+.work-featured-images .work-featured-img {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  aspect-ratio: 3/4;
+}
+
+@media screen and (max-width: 767px) {
+  .work-featured-images {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    padding: 24px;
+    min-height: auto;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .work-featured-images {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    padding: 16px;
+  }
+}
+
+/* ===== WORK PAGE - GREEN BANNER TEXT ===== */
+@media screen and (max-width: 479px) {
+  .work-featured-green {
+    padding: 24px !important;
+  }
+  .work-featured-green h2 {
+    font-size: 2.5rem !important;
+  }
+  .work-featured-green p {
+    font-size: 0.9rem !important;
+  }
+}
+
+/* ===== WORK PAGE - CASE STUDY GRID ===== */
+@media screen and (max-width: 767px) {
+  .section-casestudy .casestudy-component {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ===== WORK PAGE - QUOTE SECTION ===== */
+@media screen and (max-width: 479px) {
+  .work-quote-section {
+    padding: 48px 0 !important;
+  }
+}
+
+/* ===== WORK PAGE - HORIZONTAL GALLERY ===== */
+.work-gallery-item {
+  flex-shrink: 0;
+  width: clamp(260px, 22vw, 340px);
+  aspect-ratio: 3/4;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+}
+
+@media screen and (max-width: 767px) {
+  .work-gallery-item {
+    width: 200px;
   }
 }
 
