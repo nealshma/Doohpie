@@ -619,8 +619,8 @@ textarea {
   transform: none;
   width: 200%;
   max-width: none;
-  margin-left: -40%;
-  margin-top: 120px;
+  margin-left: -50%;
+  margin-top: 250px;
   pointer-events: auto;
   filter: brightness(0) invert(1);
 }
@@ -642,7 +642,7 @@ textarea {
   }
   .logo-mask-mobile_wrapper {
     z-index: 2;
-    height: 250px;
+    height: 400px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -3123,7 +3123,8 @@ textarea {
 
 @media screen and (max-width: 479px) {
   .weare_svg-wrapper {
-    max-width: 300px;
+    max-width: 700px;
+    margin: 0 auto;
   }
   .weare_heading {
     font-size: 2.19rem;
