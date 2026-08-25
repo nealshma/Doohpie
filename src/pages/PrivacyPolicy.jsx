@@ -45,7 +45,7 @@ function PrivacyPolicy() {
               <div className="legal-hero">
                 <span className="gf-hero-eyebrow">LEGAL</span>
                 <h1 className="legal-hero-title">
-                  Privacy<br />
+                  Privacy{' '}
                   <span className="legal-hero-accent">Policy</span>
                 </h1>
                 <p className="legal-hero-sub">
