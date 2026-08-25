@@ -1242,7 +1242,7 @@ textarea {
   line-height: 1;
   text-transform: uppercase;
   color: #05130a;
-  background: #4cda56;
+  background: #009500;
   cursor: pointer;
   text-decoration: none;
   position: relative;
@@ -4923,8 +4923,8 @@ textarea {
   flex-direction: column;
   justify-content: space-between;
   min-height: min(70vh, 700px);
-  padding-top: 1.5rem;
-  padding-bottom: 0.5rem;
+  padding-top: 8.5rem;
+  padding-bottom: 6rem;
 }
 
 .enter-the-butter {
@@ -5021,6 +5021,17 @@ textarea {
     min-height: 0;
     margin-top: 1rem;
   }
+  .butterverse-cta {
+    justify-content: flex-start;
+    flex: none;
+  }
+  .stack-left-wide {
+    align-items: center;
+  }
+  .enter-button-4rem {
+    display: block;
+    margin: 0 auto;
+  }
 }
 
 .clear-bottom-padding {
@@ -5073,7 +5084,6 @@ textarea {
     object-fit: cover;
     border-radius: 20px;
     display: block;
-    /* filter: invert(48%) sepia(93%) saturate(1352%) hue-rotate(86deg) brightness(102%) contrast(105%); */
   }
 }
 
