@@ -190,7 +190,7 @@ function Home() {
           }
         })
       },
-      { threshold: 0.2 }
+      { threshold: 0.05 }
     )
     observer.observe(svgDrawRef.current)
     return () => observer.disconnect()
@@ -205,7 +205,7 @@ function Home() {
           }
         })
       },
-      { threshold: 0.1 }
+      { threshold: 0.05 }
     )
     const elements = document.querySelectorAll('[data-animate], [data-animate-stagger], [data-animate-scale]')
     elements.forEach((el) => observer.observe(el))
@@ -275,7 +275,7 @@ function Home() {
                 variants={staggerContainer}
                 initial="hidden"
                 whileInView="show"
-                viewport={{ once: true, amount: 0.3 }}
+                viewport={{ once: true, amount: 0.1 }}
               >
                 <motion.div className="communities_eyebrow text-size-large text-style-allcaps hide-mobile-portrait" variants={fadeUp}>
                   THE GEO-TARGETED OOH PLATFORM
@@ -350,7 +350,7 @@ With geo-targeting at its core, reach audiences across cities, neighborhoods, an
                     className="homeservice_card media-hover-card"
                     initial={{ opacity: 0, scale: 0.94 }}
                     whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true, amount: 0.3 }}
+                    viewport={{ once: true, amount: 0.1 }}
                     transition={{ duration: 0.8, ease: EASE }}
                   >
                     <div className="homeservice_image-wrapper">
@@ -379,7 +379,7 @@ With geo-targeting at its core, reach audiences across cities, neighborhoods, an
                     className="homeservice_card media-hover-card"
                     initial={{ opacity: 0, scale: 0.94 }}
                     whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true, amount: 0.3 }}
+                    viewport={{ once: true, amount: 0.1 }}
                     transition={{ duration: 0.8, delay: 0.1, ease: EASE }}
                   >
                     <div className="homeservice_image-wrapper is-short">
@@ -457,7 +457,7 @@ With geo-targeting at its core, reach audiences across cities, neighborhoods, an
                 variants={staggerContainer}
                 initial="hidden"
                 whileInView="show"
-                viewport={{ once: true, amount: 0.15 }}
+                viewport={{ once: true, amount: 0.1 }}
               >
                 {assets.clientLogos.map((logo, i) => (
                   <motion.div className="logo_wrapper" key={i} variants={fadeUp}>
@@ -551,7 +551,7 @@ With geo-targeting at its core, reach audiences across cities, neighborhoods, an
                 className="margin-bottom margin-large"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.4 }}
+                viewport={{ once: true, amount: 0.1 }}
                 transition={{ duration: 0.7, ease: EASE }}
               >
                 <div className="header-wrapper">

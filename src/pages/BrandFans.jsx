@@ -198,7 +198,7 @@ function BrandFans() {
           }
         })
       },
-      { threshold: 0.2 }
+      { threshold: 0.1 }
     )
     observer.observe(svgDrawRef.current)
     return () => observer.disconnect()
