@@ -22,9 +22,29 @@ function Navbar() {
     { path: '/blog', label: 'BLOG' },
     { path: '/geo-targeting', label: 'GEO TARGETING' },
     { path: '/get-started', label: 'GET STARTED' },
-
     { path: '/contact', label: 'CONTACT' },
   ]
+
+  const navColumns = [
+    [
+      { path: '/ad-formats', label: 'AD FORMATS' },
+      { path: '/about', label: 'ABOUT' },
+    ],
+    [
+      { path: '/get-started', label: 'GET STARTED' },
+      { path: '/blog', label: 'BLOG' },
+    ],
+    [
+      { path: '/geo-targeting', label: 'GEO TARGETING' },
+      { path: '/work', label: 'WORK' },
+    ],
+    [
+      { path: '/contact', label: 'CONTACT' },
+    ],
+  ]
+
+  const linkClass = (path) =>
+    `navbar_menu_link w-nav-link ${location.pathname === path ? 'w--current' : ''}`
 
   return (
     <>
@@ -42,14 +62,18 @@ function Navbar() {
                   />
                 </Link>
                 <div className="navbar_links">
-                  {navLinks.map((link) => (
-                    <Link
-                      key={link.path}
-                      to={link.path}
-                      className={`navbar_menu_link w-nav-link ${location.pathname === link.path ? 'w--current' : ''}`}
-                    >
-                      {link.label}
-                    </Link>
+                  {navColumns.map((column, colIdx) => (
+                    <div className="navbar_column" key={colIdx}>
+                      {column.map((link) => (
+                        <Link
+                          key={link.path}
+                          to={link.path}
+                          className={linkClass(link.path)}
+                        >
+                          {link.label}
+                        </Link>
+                      ))}
+                    </div>
                   ))}
                 </div>
                 <div
