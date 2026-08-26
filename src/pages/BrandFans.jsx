@@ -186,15 +186,27 @@ function BrandFans() {
 
   useEffect(() => {
     if (!svgDrawRef.current) return
+    const heading = weareHeadingRef.current
+
+    const restartAnimation = (el) => {
+      if (!el) return
+      el.classList.remove('animate')
+      void el.offsetWidth
+    }
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('animate')
-            if (weareHeadingRef.current) {
-              weareHeadingRef.current.classList.add('animate')
-            }
-            observer.disconnect()
+            restartAnimation(entry.target)
+            restartAnimation(heading)
+            requestAnimationFrame(() => {
+              entry.target.classList.add('animate')
+              if (heading) heading.classList.add('animate')
+            })
+          } else {
+            entry.target.classList.remove('animate')
+            if (heading) heading.classList.remove('animate')
           }
         })
       },
