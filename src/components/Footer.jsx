@@ -53,7 +53,7 @@ function Footer() {
                           color: '#fff',
                         }}
                       >
-                        OOH For<br />Every Brand
+                        Outdoor For<br />Every Brand
                       </div>
                     </div>
                     <div className="we-work_text max-width-small">

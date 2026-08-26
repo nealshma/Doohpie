@@ -7,7 +7,7 @@ import { EASE, fadeUp, staggerContainer } from '../components/motion-ui'
 
 const featuredPost = {
   title: 'From Buying Billboards To Building Location Strategy',
-  excerpt: "Why the smartest OOH campaigns start with a radius on a map, not a billboard on a shortlist - and what changes when you plan by location first.",
+  excerpt: "Why the smartest outdoor campaigns start with a radius on a map, not a billboard on a shortlist - and what changes when you plan by location first.",
   image: assets.blog.featured,
   tags: ['geo-targeting'],
   date: '12/16/2024',
@@ -16,7 +16,7 @@ const featuredPost = {
 }
 
 const allPosts = [
-  { title: 'Why Geo-Targeted OOH Outperforms City-Wide Buys', excerpt: 'A tighter radius beats a bigger budget - the math behind hyperlocal outdoor performance.', image: assets.blog.post1, tags: ['geo-targeting', 'strategy'], date: '11/28/2024', readTime: '5 min read' },
+  { title: 'Why Geo-Targeted Outdoor Outperforms City-Wide Buys', excerpt: 'A tighter radius beats a bigger budget - the math behind hyperlocal outdoor performance.', image: assets.blog.post1, tags: ['geo-targeting', 'strategy'], date: '11/28/2024', readTime: '5 min read' },
   { title: 'Static vs Digital: Choosing The Right Billboard Format', excerpt: 'Print permanence or screen flexibility - how to pick the format that actually fits your campaign.', image: assets.blog.post2, tags: ['formats', 'strategy'], date: '11/15/2024', readTime: '4 min read' },
   { title: 'Dayparting On Digital LED: From Morning Coffee To Evening Entertainment', excerpt: 'One screen, six creatives, three moods - how to run a digital LED loop that shifts with the day.', image: assets.blog.post3, tags: ['digital led', 'formats'], date: '11/02/2024', readTime: '5 min read' },
   { title: 'Construction Covers: Turning Barriers Into Brand Experiences', excerpt: 'Plain hoarding becomes a months-long brand takeover - a look at what makes a cover campaign work.', image: assets.blog.post4, tags: ['formats', 'planning'], date: '10/20/2024', readTime: '4 min read' },

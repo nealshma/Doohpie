@@ -7,7 +7,7 @@ const sections = [
   },
   {
     title: '2. Description of Service',
-    body: 'Doohpie provides a geo-targeted out-of-home (OOH) and digital out-of-home (DOOH) advertising platform that enables advertisers to plan, manage, and execute outdoor advertising campaigns across multiple locations and formats.',
+    body: 'Doohpie provides a geo-targeted out-of-home and digital out-of-home advertising platform that enables advertisers to plan, manage, and execute outdoor advertising campaigns across multiple locations and formats.',
   },
   {
     title: '3. Campaign Planning and Booking',

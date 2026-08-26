@@ -515,7 +515,7 @@ function About() {
                 viewport={{ once: true, amount: 0.2 }}
               >
                 <motion.div className="compare-col compare-col-old" variants={fadeUp}>
-                  <div className="compare-col-label">TRADITIONAL OOH</div>
+                  <div className="compare-col-label">TRADITIONAL OUTDOOR</div>
                   {comparisonRows.map((row) => (
                     <div className="compare-row" key={row.old}>
                       <span className="compare-icon cross">&#10005;</span>

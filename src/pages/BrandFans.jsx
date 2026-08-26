@@ -292,7 +292,7 @@ function BrandFans() {
                 <h2 data-animate className="weare_heading is-visible" ref={weareHeadingRef}>
                   <span className="typing-text typing-line-1">WE ARE THE</span><br />
                   <span className="typing-text typing-line-2">GEO-TARGETING</span><br />
-                  <span className="typing-text typing-line-3">OOH PLATFORM</span>
+                  <span className="typing-text typing-line-3">OUTDOOR PLATFORM</span>
                 </h2>
               </div>
             </div>

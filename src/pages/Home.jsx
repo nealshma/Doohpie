@@ -278,13 +278,13 @@ function Home() {
                 viewport={{ once: true, amount: 0.1 }}
               >
                 <motion.div className="communities_eyebrow text-size-large text-style-allcaps hide-mobile-portrait" variants={fadeUp}>
-                  THE GEO-TARGETED OOH PLATFORM
+                  THE GEO-TARGETED OUTDOOR PLATFORM
                 </motion.div>
                 <motion.div className="communities_eyebrow text-size-large text-style-allcaps text-align-right" variants={fadeUp}>
                   REACH THE RIGHT AUDIENCE. IN THE RIGHT PLACE.
                 </motion.div>
                 <motion.p className="text-size-large custom-homepage" variants={fadeUp}>
-                  Doohpie is a location-powered advertising platform for planning and managing OOH & DOOH campaigns.
+                  Doohpie is a location-powered advertising platform for planning and managing outdoor & digital outdoor campaigns.
 With geo-targeting at its core, reach audiences across cities, neighborhoods, and high-traffic locations.
                 </motion.p>
               </motion.div>
@@ -330,7 +330,7 @@ With geo-targeting at its core, reach audiences across cities, neighborhoods, an
                 <h2 data-animate className="weare_heading is-visible" ref={weareHeadingRef}>
                   <span className="typing-text typing-line-1">WE ARE THE</span><br />
                   <span className="typing-text typing-line-2">GEO-TARGETING</span><br />
-                  <span className="typing-text typing-line-3">OOH PLATFORM</span>
+                  <span className="typing-text typing-line-3">OUTDOOR PLATFORM</span>
                 </h2>
               </div>
             </div>
